@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Preloader from "../components/Preloader";
 import CursorGlow from "../components/CursorGlow";
-import { Services, Trust, Portfolio, Process, SalesBand, Pricing, Contact } from "../components/Sections";
+import { Services, Trust, Portfolio, Configurator, Process, SalesBand, Pricing, Contact } from "../components/Sections";
 
 export default function Home() {
   return (
@@ -16,12 +16,13 @@ export default function Home() {
       <Services />
       <Trust />
       <Portfolio />
+      <Configurator />
       <Process />
       <SalesBand />
       <Pricing />
       <Contact />
       <footer>
-        <strong>KARIVO X 2.2</strong>
+        <strong>KARIVO X 2.3</strong>
         <span>Websites, die Kunden überzeugen.</span>
       </footer>
     </>

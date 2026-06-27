@@ -1,15 +1,13 @@
-# KARIVO X 2.2
+# KARIVO X 2.3
 
 Modernes Next.js/React-Projekt für KARIVO.
 
-## Neu in 2.2
-- Premium Preloader
-- Cursor Glow
-- stärkere Hero-Motion
-- animierter Lichtstrahl
-- Sales-Band / Conversion-Sektion
-- bessere Motion Delays
-- mehr Agentur-Look
+## Neu in 2.3
+- Website-Konfigurator-Vorschau
+- interaktive Branchen-/Stil-/Paket-Auswahl
+- stärkere Portfolio-Cards mit Paket-Tags
+- Hero CTA auf Konfigurator angepasst
+- weitere Premium-Conversion-Struktur
 
 ## Lokal starten
 ```bash
@@ -25,9 +23,3 @@ Am besten mit Vercel:
 3. Vercel mit GitHub verbinden
 4. Framework: Next.js
 5. Deploy
-
-## Wichtig
-- Telefonnummer / WhatsApp ergänzen
-- E-Mail ergänzen
-- Impressum / Datenschutz ergänzen
-- Demo-Links ersetzen

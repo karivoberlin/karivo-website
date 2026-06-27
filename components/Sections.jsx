@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const fade = {
   initial: { opacity: 0, y: 34, filter: "blur(10px)" },
@@ -48,9 +49,9 @@ export function Trust() {
 
 export function Portfolio() {
   const projects = [
-    ["Restaurant Demo", "Speisekarte, Galerie, Reservierung und Google Maps."],
-    ["Fahrschul-Konzept", "Kurse, Preise, Anmeldung und Vertrauen."],
-    ["Handwerker-Konzept", "Leistungen, Referenzen und direkter Anruf-CTA."]
+    ["Restaurant Demo", "Speisekarte, Galerie, Reservierung und Google Maps.", "Business"],
+    ["Fahrschul-Konzept", "Kurse, Preise, Anmeldung und Vertrauen.", "Premium"],
+    ["Handwerker-Konzept", "Leistungen, Referenzen und direkter Anruf-CTA.", "Premium"]
   ];
 
   return (
@@ -61,10 +62,11 @@ export function Portfolio() {
         <p>Später ersetzt du diese Demos durch echte Kundenprojekte und Case Studies.</p>
       </motion.div>
       <div className="projectGrid">
-        {projects.map(([title, text]) => (
+        {projects.map(([title, text, tier]) => (
           <motion.article className="projectCard premiumCard" key={title} {...fade}>
             <div className="browserMock">
               <div /><div /><div />
+              <span>{tier}</span>
             </div>
             <small>KARIVO DEMO</small>
             <h3>{title}</h3>
@@ -73,6 +75,60 @@ export function Portfolio() {
           </motion.article>
         ))}
       </div>
+    </section>
+  );
+}
+
+export function Configurator() {
+  const [industry, setIndustry] = useState("Restaurant");
+  const [style, setStyle] = useState("Elegant");
+  const [packageName, setPackageName] = useState("Premium");
+
+  const price = packageName === "Starter" ? "349 €" : packageName === "Premium" ? "599 €" : "899 €";
+
+  return (
+    <section className="configurator" id="konfigurator">
+      <motion.div className="sectionHead" {...fade}>
+        <p className="eyebrow">Website-Konfigurator</p>
+        <h2>Zeig Kunden schon vor dem Gespräch, was möglich ist.</h2>
+        <p>Ein erster Vorgeschmack auf den späteren KARIVO-Konfigurator.</p>
+      </motion.div>
+
+      <motion.div className="configGrid" {...fade}>
+        <div className="configPanel">
+          <label>Branche
+            <select value={industry} onChange={(e) => setIndustry(e.target.value)}>
+              <option>Restaurant</option>
+              <option>Fahrschule</option>
+              <option>Handwerker</option>
+              <option>Friseur / Beauty</option>
+            </select>
+          </label>
+          <label>Stil
+            <select value={style} onChange={(e) => setStyle(e.target.value)}>
+              <option>Elegant</option>
+              <option>Minimalistisch</option>
+              <option>Luxuriös</option>
+              <option>Modern</option>
+            </select>
+          </label>
+          <label>Paket
+            <select value={packageName} onChange={(e) => setPackageName(e.target.value)}>
+              <option>Starter</option>
+              <option>Premium</option>
+              <option>Business</option>
+            </select>
+          </label>
+        </div>
+
+        <div className="previewCard">
+          <small>{industry} · {style}</small>
+          <h3>{packageName} Website</h3>
+          <p>Individueller Online-Auftritt mit hochwertigem Design, klaren Kontaktwegen und mobilem Aufbau.</p>
+          <strong>ab {price}</strong>
+          <a href="#kontakt" className="btn primary">Diese Richtung anfragen</a>
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -136,11 +192,7 @@ export function Pricing() {
             <h3>{name}</h3>
             <strong>{price}</strong>
             <p>{desc}</p>
-            <ul>
-              <li>Mobil optimiert</li>
-              <li>Kontaktfokus</li>
-              <li>Premium-Look</li>
-            </ul>
+            <ul><li>Mobil optimiert</li><li>Kontaktfokus</li><li>Premium-Look</li></ul>
           </motion.article>
         ))}
       </div>
@@ -163,10 +215,7 @@ export function Contact() {
         <input name="email" type="email" placeholder="E-Mail" required />
         <input name="telefon" placeholder="Telefon / WhatsApp" />
         <select name="paket">
-          <option>Starter · 349 €</option>
-          <option>Premium · 599 €</option>
-          <option>Business · 899 €</option>
-          <option>Noch unsicher</option>
+          <option>Starter · 349 €</option><option>Premium · 599 €</option><option>Business · 899 €</option><option>Noch unsicher</option>
         </select>
         <textarea name="nachricht" placeholder="Was soll deine Website erreichen?" required />
         <button type="submit">Anfrage senden</button>

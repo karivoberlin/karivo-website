@@ -587,3 +587,86 @@ footer{
   .salesBand{padding:44px 24px}
   footer{display:block;text-align:center}
 }
+
+
+.configurator{
+  padding:110px 6%;
+  background:
+    radial-gradient(circle at 50% 0,rgba(212,175,55,.13),transparent 35%),
+    #070708;
+}
+.configGrid{
+  max-width:1120px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:24px;
+}
+.configPanel,.previewCard{
+  border:1px solid var(--line);
+  border-radius:36px;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.032));
+  padding:34px;
+}
+.configPanel{
+  display:grid;
+  gap:18px;
+}
+.configPanel label{
+  display:grid;
+  gap:8px;
+  color:#ddd;
+  font-weight:900;
+}
+.previewCard{
+  position:relative;
+  overflow:hidden;
+  min-height:390px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+}
+.previewCard:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 20%,rgba(212,175,55,.24),transparent 34%),
+    linear-gradient(135deg,rgba(212,175,55,.08),transparent);
+}
+.previewCard small,.previewCard h3,.previewCard p,.previewCard strong,.previewCard a{
+  position:relative;
+  z-index:2;
+}
+.previewCard small{
+  color:var(--gold);
+  text-transform:uppercase;
+  letter-spacing:2px;
+  font-weight:900;
+}
+.previewCard h3{
+  font-size:46px;
+  line-height:.95;
+  margin:18px 0;
+}
+.previewCard p{
+  color:#c6c7cf;
+  max-width:620px;
+}
+.previewCard strong{
+  display:block;
+  color:var(--gold);
+  font-family:"Space Grotesk";
+  font-size:54px;
+  margin:20px 0;
+}
+.browserMock span{
+  margin-left:auto;
+  color:var(--gold2);
+  font-size:12px;
+  font-weight:900;
+}
+@media(max-width:1050px){
+  .configurator{padding:80px 5%}
+  .configGrid{grid-template-columns:1fr}
+}
