@@ -9,7 +9,7 @@ export default function Danke() {
         <p className="eyebrow">Anfrage erfolgreich versendet</p>
         <h1>Vielen Dank für deine Anfrage!</h1>
         <p className="thanksSubtitle">
-          Deine Anfrage wurde erfolgreich übermittelt. KARIVO meldet sich in der Regel innerhalb von 24 Stunden mit einer Rückmeldung bei dir.
+          Deine Anfrage wurde erfolgreich übermittelt. KARIVO meldet sich in der Regel innerhalb von 24 Stunden bei dir.
         </p>
       </section>
 
@@ -25,36 +25,34 @@ export default function Danke() {
           <span>2</span>
           <div>
             <h3>Konzept</h3>
-            <p>Wir schauen uns Branche, Paket und gewünschte Betreuung an.</p>
+            <p>Wir schauen uns Paket, Branche und Care-Wunsch an.</p>
           </div>
         </div>
         <div className="step">
           <span>3</span>
           <div>
             <h3>Angebot</h3>
-            <p>Du bekommst ein unverbindliches Angebot für Website und Care.</p>
+            <p>Du erhältst ein unverbindliches Website-Angebot.</p>
           </div>
         </div>
         <div className="step">
           <span>4</span>
           <div>
             <h3>Umsetzung</h3>
-            <p>Nach deiner Freigabe starten wir mit deiner Website.</p>
+            <p>Nach deiner Freigabe starten wir dein Projekt.</p>
           </div>
         </div>
       </section>
 
       <section className="thanksPanel">
-        <div>
-          <p className="eyebrow">Während du wartest</p>
-          <h2>Folge KARIVO auf Social Media.</h2>
-          <p>Die Links sind vorbereitet und können später einfach durch deine echten Profile ersetzt werden.</p>
-        </div>
+        <p className="eyebrow">Während du wartest</p>
+        <h2>Folge KARIVO auf Social Media.</h2>
+        <p>Die Links sind vorbereitet und können später einfach durch deine echten Profile ersetzt werden.</p>
 
         <div className="socialButtons">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="TikTok">TikTok</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">LinkedIn</a>
         </div>
 
         <a className="whatsappButton" href="#">WhatsApp schreiben</a>

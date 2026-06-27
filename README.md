@@ -1,13 +1,19 @@
-# KARIVO X 2.5
+# KARIVO X 3.0 Final
 
-Finalere Version mit:
-- Website-Paketen
-- Care-Paketen
+Finale, stabile Next.js-Version.
+
+## Enthalten
+- Premium Hero
+- Website-Pakete
+- Care-Pakete
+- Beliebte Kombi: Premium + Care+
+- Beispiele
+- Ablauf
+- FAQ
 - Anfrageformular mit Status-Button
-- hochwertiger Danke-Seite
-- Social-Media-Platzhaltern
+- professionelle Danke-Seite
+- Social-Media-Platzhalter
 - WhatsApp-Platzhalter
-- Timeline nach Anfrage
 
 ## Starten
 ```bash
@@ -15,10 +21,12 @@ npm install
 npm run dev
 ```
 
-## Wichtig
-Später ersetzen:
+## Deployment
+Vercel über GitHub.
+
+## Später ersetzen
 - Instagram-Link
 - TikTok-Link
 - LinkedIn-Link
 - WhatsApp-Link
-- E-Mail / rechtliche Seiten
+- Impressum / Datenschutz ergänzen
