@@ -3,6 +3,13 @@ window.addEventListener('load', () => {
   setTimeout(() => preloader?.classList.add('hide'), 450);
 });
 
+const progress = document.getElementById('scrollProgress');
+window.addEventListener('scroll', () => {
+  const height = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = (window.scrollY / height) * 100;
+  if (progress) progress.style.width = scrolled + '%';
+});
+
 const toggle = document.getElementById('mobileToggle');
 const navLinks = document.getElementById('navLinks');
 toggle?.addEventListener('click', () => navLinks?.classList.toggle('open'));

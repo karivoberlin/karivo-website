@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>KARIVO | Premium Websites für lokale Unternehmen</title>
-  <meta name="description" content="KARIVO erstellt minimalistische Premium-Websites für lokale Unternehmen. Webdesign, Betreuung und moderne Online-Auftritte." />
+  <meta name="description" content="KARIVO erstellt moderne Premium-Websites für Restaurants, Fahrschulen, Handwerker, Friseure und lokale Unternehmen. Minimalistisch, schnell und mobil optimiert." />
+  <meta name="theme-color" content="#08080A" />
+
+  <meta property="og:title" content="KARIVO | Websites, die Kunden überzeugen" />
+  <meta property="og:description" content="Premium-Websites für lokale Unternehmen. Klar, hochwertig und mobil optimiert." />
+  <meta property="og:type" content="website" />
+
   <link rel="icon" href="assets/favicon.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -12,6 +19,7 @@
   <div class="preloader" id="preloader"><span>KARIVO</span></div>
   <div class="cursor-glow"></div>
   <div class="grain"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
   <nav class="nav">
     <a href="index.html" class="brand"><img src="assets/karivo-logo.svg" alt="KARIVO Logo" /></a>
@@ -37,7 +45,12 @@
       <p class="reveal">KARIVO baut moderne Websites für lokale Unternehmen — minimalistisch, schnell, mobil optimiert und so gestaltet, dass Besucher Vertrauen gewinnen.</p>
       <div class="actions reveal">
         <a class="btn primary magnetic" href="#kontakt">Projekt starten</a>
-        <a class="btn secondary magnetic" href="#projekte">Projekte ansehen</a>
+        <a class="btn secondary magnetic" href="#preise">Pakete ansehen</a>
+      </div>
+      <div class="micro-proof reveal">
+        <span>✓ Persönlicher Ansprechpartner</span>
+        <span>✓ Klare Preise</span>
+        <span>✓ Fertig in wenigen Tagen</span>
       </div>
     </div>
 
@@ -91,6 +104,11 @@
       </div>
     </section>
 
+    <section class="conversion-band reveal">
+      <span>Ein guter Auftritt wirkt, bevor du überhaupt mit dem Kunden sprichst.</span>
+      <a href="#kontakt">Kostenlos anfragen →</a>
+    </section>
+
     <section class="project-showcase" id="projekte">
       <div class="showcase-head reveal">
         <p class="eyebrow">Projektbeispiele</p>
@@ -141,6 +159,19 @@
       </div>
     </section>
 
+    <section class="faq">
+      <div class="section-title reveal">
+        <p class="eyebrow">FAQ</p>
+        <h2>Fragen, die Kunden oft stellen.</h2>
+      </div>
+      <div class="faq-grid">
+        <details class="reveal"><summary>Wie schnell ist eine Website fertig?</summary><p>Je nach Paket meistens innerhalb weniger Tage nach Erhalt aller Inhalte.</p></details>
+        <details class="reveal"><summary>Kann ich später Inhalte ändern lassen?</summary><p>Ja. Dafür gibt es KARIVO Care, Care+ und Care Pro.</p></details>
+        <details class="reveal"><summary>Ist die Website für Handys optimiert?</summary><p>Ja. Jede KARIVO-Website wird mobil gedacht und responsive umgesetzt.</p></details>
+        <details class="reveal"><summary>Kann ich eine eigene Domain nutzen?</summary><p>Ja. Die Website kann mit deiner bestehenden oder neuen Domain verbunden werden.</p></details>
+      </div>
+    </section>
+
     <section class="contact" id="kontakt">
       <div class="contact-copy reveal">
         <p class="eyebrow">Kontakt</p>
@@ -174,14 +205,21 @@
           <option>Noch unsicher</option>
         </select>
         <textarea name="nachricht" placeholder="Was soll deine Website erreichen?" required></textarea>
+        <small>Mit dem Absenden erklärst du dich einverstanden, dass KARIVO dich zur Anfrage kontaktieren darf.</small>
         <button type="submit">Anfrage senden</button>
       </form>
     </section>
   </main>
 
   <footer>
-    <img src="assets/karivo-logo.svg" alt="KARIVO Logo">
-    <p>© 2026 KARIVO · Websites, die Kunden überzeugen.</p>
+    <div>
+      <img src="assets/karivo-logo.svg" alt="KARIVO Logo">
+      <p>Websites, die Kunden überzeugen.</p>
+    </div>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
