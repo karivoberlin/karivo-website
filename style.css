@@ -34,3 +34,62 @@ input:focus,textarea:focus,select:focus{
   .micro-proof span{font-size:12px}
   .service-card h3{margin-top:45px}
 }
+
+
+/* KARIVO 1.2 sales sections */
+.offer-section{
+  margin:0 6% 112px;
+  padding:78px;
+  border:1px solid rgba(212,175,55,.26);
+  border-radius:46px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:44px;
+  align-items:center;
+  background:
+    radial-gradient(circle at 75% 10%,rgba(212,175,55,.16),transparent 35%),
+    linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+}
+.offer-copy h2{font-size:clamp(40px,5vw,76px);line-height:.96;letter-spacing:-3px}
+.offer-copy p:last-child{color:#c4c5cd;font-size:18px;margin-top:18px}
+.offer-list{display:grid;gap:14px}
+.offer-list div{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:18px 20px;
+  background:rgba(255,255,255,.045);
+}
+.offer-list strong{color:var(--gold);font-size:22px}
+.offer-list span{font-weight:900;color:#e8e8ee}
+.guarantee{
+  margin:0 6% 112px;
+  padding:70px 6%;
+  text-align:center;
+  border-radius:42px;
+  border:1px solid rgba(212,175,55,.26);
+  background:
+    radial-gradient(circle at 50% 0,rgba(212,175,55,.13),transparent 35%),
+    #0D0D11;
+}
+.guarantee h2{font-size:clamp(40px,5vw,78px);line-height:.96;letter-spacing:-3px}
+.guarantee p:last-child{max-width:780px;margin:18px auto 0;color:#c4c5cd;font-size:18px}
+.nav-links a.active{color:var(--gold)}
+.price.featured::before{
+  content:'Empfohlen für die meisten Kunden';
+  display:inline-flex;
+  margin-bottom:16px;
+  color:#111;
+  background:var(--gold);
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:12px;
+  font-weight:900;
+}
+@media(max-width:1050px){
+  .offer-section{grid-template-columns:1fr;margin:0 5% 82px;padding:44px 24px}
+  .guarantee{margin:0 5% 82px;padding:44px 24px}
+}
