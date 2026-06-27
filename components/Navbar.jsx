@@ -6,7 +6,7 @@ export default function Navbar() {
       className="nav"
       initial={{ opacity: 0, y: -18 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.65 }}
+      transition={{ duration: 0.65, delay: 0.9 }}
     >
       <a className="brand" href="#start">KARIVO</a>
       <div className="navLinks">

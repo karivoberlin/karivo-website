@@ -1,20 +1,27 @@
+"use client";
+
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import { Services, Trust, Portfolio, Process, Pricing, Contact } from "../components/Sections";
+import Preloader from "../components/Preloader";
+import CursorGlow from "../components/CursorGlow";
+import { Services, Trust, Portfolio, Process, SalesBand, Pricing, Contact } from "../components/Sections";
 
 export default function Home() {
   return (
     <>
+      <Preloader />
+      <CursorGlow />
       <Navbar />
       <Hero />
       <Services />
       <Trust />
       <Portfolio />
       <Process />
+      <SalesBand />
       <Pricing />
       <Contact />
       <footer>
-        <strong>KARIVO X 2.1</strong>
+        <strong>KARIVO X 2.2</strong>
         <span>Websites, die Kunden überzeugen.</span>
       </footer>
     </>

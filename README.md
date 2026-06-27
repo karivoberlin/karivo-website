@@ -1,15 +1,15 @@
-# KARIVO X 2.1
+# KARIVO X 2.2
 
 Modernes Next.js/React-Projekt für KARIVO.
 
-## Neu in 2.1
-- stärkerer Hero
-- Mouse Parallax im Hero
-- bessere Portfolio-Mockups
-- Prozess-Sektion
-- hochwertigere Cards
-- bessere Formular-Fokuszustände
-- sauberere Komponentenstruktur
+## Neu in 2.2
+- Premium Preloader
+- Cursor Glow
+- stärkere Hero-Motion
+- animierter Lichtstrahl
+- Sales-Band / Conversion-Sektion
+- bessere Motion Delays
+- mehr Agentur-Look
 
 ## Lokal starten
 ```bash

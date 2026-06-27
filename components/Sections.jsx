@@ -104,6 +104,18 @@ export function Process() {
   );
 }
 
+export function SalesBand() {
+  return (
+    <motion.section className="salesBand" {...fade}>
+      <div>
+        <p className="eyebrow">KARIVO Effekt</p>
+        <h2>Deine Website soll nicht nur schön aussehen. Sie soll Vertrauen verkaufen.</h2>
+      </div>
+      <a className="btn primary" href="#kontakt">Kostenlos anfragen</a>
+    </motion.section>
+  );
+}
+
 export function Pricing() {
   const prices = [
     ["Starter", "349 €", "Onepage für kleine Unternehmen."],

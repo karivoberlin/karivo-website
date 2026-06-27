@@ -26,6 +26,41 @@ body:before{
   pointer-events:none;
 }
 a{color:inherit}
+.preloader{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:#050506;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.preloaderInner{
+  display:grid;
+  justify-items:center;
+  gap:22px;
+}
+.preloaderInner span{
+  color:var(--gold);
+  font-weight:900;
+  letter-spacing:14px;
+  font-size:18px;
+}
+.preloaderInner i{
+  display:block;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+}
+.cursorGlow{
+  position:fixed;
+  width:460px;
+  height:460px;
+  border-radius:50%;
+  pointer-events:none;
+  z-index:1;
+  background:radial-gradient(circle,rgba(212,175,55,.13),transparent 68%);
+  mix-blend-mode:screen;
+}
 .nav{
   position:fixed;
   top:0;
@@ -85,6 +120,14 @@ a{color:inherit}
   background-size:90px 90px;
   transform:perspective(900px) rotateX(64deg) translateY(-120px);
   opacity:.28;
+}
+.lightBeam{
+  position:absolute;
+  inset:20% -20% auto -20%;
+  height:280px;
+  transform:rotate(-12deg);
+  background:linear-gradient(90deg,transparent,rgba(212,175,55,.22),transparent);
+  filter:blur(35px);
 }
 .aurora{
   position:absolute;
@@ -247,6 +290,23 @@ h1{
 }
 .tagOne{left:0;top:120px}
 .tagTwo{right:0;bottom:120px}
+.heroStrip{
+  position:absolute;
+  left:6%;
+  right:6%;
+  bottom:24px;
+  z-index:4;
+  display:flex;
+  justify-content:space-between;
+  gap:18px;
+  border-top:1px solid rgba(255,255,255,.09);
+  padding-top:22px;
+  color:#a9aab2;
+  text-transform:uppercase;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:900;
+}
 .section,.portfolio,.contact{
   padding:110px 6%;
 }
@@ -293,6 +353,7 @@ h2{
 .premiumCard{
   position:relative;
   overflow:hidden;
+  transition:.32s;
 }
 .premiumCard:before{
   content:"";
@@ -398,6 +459,22 @@ h2{
   font-size:28px;
   margin-bottom:10px;
 }
+.salesBand{
+  margin:0 6% 110px;
+  padding:74px 6%;
+  border-radius:46px;
+  border:1px solid rgba(212,175,55,.28);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:38px;
+  background:
+    radial-gradient(circle at 80% 10%,rgba(212,175,55,.16),transparent 38%),
+    linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+}
+.salesBand h2{
+  max-width:900px;
+}
 .price{position:relative}
 .featured{
   border-color:rgba(212,175,55,.62);
@@ -495,15 +572,18 @@ footer{
 .thanks p{margin:22px 0;color:#c2c3cc}
 @keyframes float{to{transform:translateY(-28px) scale(1.08)}}
 @media(max-width:1050px){
-  .navLinks,.navCta{display:none}
-  .hero,.contact{grid-template-columns:1fr}
-  .hero{padding:110px 5% 70px}
+  .cursorGlow,.navLinks,.navCta{display:none}
+  .hero,.contact,.salesBand{grid-template-columns:1fr;display:grid}
+  .hero{padding:110px 5% 90px}
   h1{letter-spacing:-2px}
   .heroVisual{min-height:430px}
   .glassLaptop{transform:none}
+  .floatingTag{display:none}
+  .heroStrip{display:none}
   .cardGrid,.projectGrid,.priceGrid,.processGrid,.trustWall{grid-template-columns:1fr}
   .trustWall div{border-right:0;border-bottom:1px solid rgba(255,255,255,.09)}
-  .portfolio,.contact,.trustWall{margin:0 5% 80px}
+  .portfolio,.contact,.trustWall,.salesBand{margin:0 5% 80px}
   .section,.portfolio,.contact{padding:80px 5%}
+  .salesBand{padding:44px 24px}
   footer{display:block;text-align:center}
 }
