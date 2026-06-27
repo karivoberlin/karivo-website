@@ -9,16 +9,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="preloader" id="preloader">
-    <span>KARIVO</span>
-  </div>
-
+  <div class="preloader" id="preloader"><span>KARIVO</span></div>
   <div class="cursor-glow"></div>
   <div class="grain"></div>
 
   <nav class="nav">
     <a href="index.html" class="brand"><img src="assets/karivo-logo.svg" alt="KARIVO Logo" /></a>
-    <div class="nav-links">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menü öffnen">☰</button>
+    <div class="nav-links" id="navLinks">
       <a href="#leistungen">Leistungen</a>
       <a href="#projekte">Projekte</a>
       <a href="#prozess">Ablauf</a>
@@ -49,13 +47,9 @@
       <div class="ring ring-two"></div>
       <div class="gold-cube"></div>
       <div class="black-orb"></div>
-
       <div class="laptop">
         <div class="laptop-screen">
-          <div class="mini-nav">
-            <i></i><i></i><i></i>
-            <span>karivo.web</span>
-          </div>
+          <div class="mini-nav"><i></i><i></i><i></i><span>karivo.web</span></div>
           <div class="mini-content">
             <small>PREMIUM LOCAL WEBSITES</small>
             <h2>Design,<br>das verkauft.</h2>
@@ -67,11 +61,7 @@
     </div>
 
     <div class="hero-strip reveal">
-      <span>Restaurants</span>
-      <span>Fahrschulen</span>
-      <span>Handwerker</span>
-      <span>Friseure</span>
-      <span>Fitnessstudios</span>
+      <span>Restaurants</span><span>Fahrschulen</span><span>Handwerker</span><span>Friseure</span><span>Fitnessstudios</span>
     </div>
   </header>
 
@@ -93,26 +83,10 @@
         </div>
 
         <div class="service-bento">
-          <article class="service-card reveal">
-            <div class="icon">✦</div>
-            <h3>Website erstellen</h3>
-            <p>Moderne Websites mit klarer Struktur, hochwertiger Optik und Fokus auf Anfragen.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="icon">↗</div>
-            <h3>Website modernisieren</h3>
-            <p>Aus veralteten Websites entstehen digitale Auftritte, die wieder Vertrauen schaffen.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="icon">◌</div>
-            <h3>Website betreuen</h3>
-            <p>Monatliche Pflege für Bilder, Texte, Speisekarten, Öffnungszeiten und kleine Änderungen.</p>
-          </article>
-          <article class="service-card reveal">
-            <div class="icon">⚡</div>
-            <h3>Schnell online</h3>
-            <p>Schlanke Prozesse, schnelle Umsetzung und eine Website, die auf allen Geräten funktioniert.</p>
-          </article>
+          <article class="service-card reveal"><div class="icon">✦</div><h3>Website erstellen</h3><p>Moderne Websites mit klarer Struktur, hochwertiger Optik und Fokus auf Anfragen.</p></article>
+          <article class="service-card reveal"><div class="icon">↗</div><h3>Website modernisieren</h3><p>Aus veralteten Websites entstehen digitale Auftritte, die wieder Vertrauen schaffen.</p></article>
+          <article class="service-card reveal"><div class="icon">◌</div><h3>Website betreuen</h3><p>Monatliche Pflege für Bilder, Texte, Speisekarten, Öffnungszeiten und kleine Änderungen.</p></article>
+          <article class="service-card reveal"><div class="icon">⚡</div><h3>Schnell online</h3><p>Schlanke Prozesse, schnelle Umsetzung und eine Website, die auf allen Geräten funktioniert.</p></article>
         </div>
       </div>
     </section>
@@ -123,20 +97,10 @@
         <h2>Nicht jede Branche braucht denselben Stil.</h2>
         <p>Ein Restaurant braucht Atmosphäre. Eine Fahrschule braucht Vertrauen. Ein Handwerker braucht Klarheit. KARIVO passt den Auftritt an das Unternehmen an.</p>
       </div>
-
       <div class="project-grid">
-        <article class="project-card restaurant reveal">
-          <span>Restaurant</span>
-          <h3>Speisekarte, Galerie & Reservierung</h3>
-        </article>
-        <article class="project-card driving reveal">
-          <span>Fahrschule</span>
-          <h3>Kurse, Preise & Online-Anfrage</h3>
-        </article>
-        <article class="project-card craft reveal">
-          <span>Handwerk</span>
-          <h3>Leistungen, Vertrauen & Anruf-CTA</h3>
-        </article>
+        <article class="project-card restaurant reveal"><span>Restaurant</span><h3>Speisekarte, Galerie & Reservierung</h3></article>
+        <article class="project-card driving reveal"><span>Fahrschule</span><h3>Kurse, Preise & Online-Anfrage</h3></article>
+        <article class="project-card craft reveal"><span>Handwerk</span><h3>Leistungen, Vertrauen & Anruf-CTA</h3></article>
       </div>
     </section>
 
@@ -145,7 +109,6 @@
         <p class="eyebrow">Ablauf</p>
         <h2>Einfacher Prozess. Hochwertiges Ergebnis.</h2>
       </div>
-
       <div class="timeline">
         <div class="step reveal"><b>01</b><h3>Analyse</h3><p>Wir klären Branche, Ziel, Stil, Bilder und Inhalte.</p></div>
         <div class="step reveal"><b>02</b><h3>Entwurf</h3><p>Du bekommst einen ersten hochwertigen Website-Entwurf.</p></div>
@@ -159,27 +122,22 @@
         <p class="eyebrow">Preise</p>
         <h2>Klare Pakete. Kein kompliziertes Agentur-Gelaber.</h2>
       </div>
-
       <div class="price-grid">
-        <article class="price reveal">
-          <h3>Starter</h3>
-          <strong>349 €</strong>
-          <p>Onepage für kleine Unternehmen.</p>
-          <ul><li>Startseite</li><li>Kontakt</li><li>Mobil optimiert</li></ul>
-        </article>
-        <article class="price featured reveal">
-          <div class="label">Beliebt</div>
-          <h3>Premium</h3>
-          <strong>599 €</strong>
-          <p>Mehrseitige Website mit starkem Auftritt.</p>
-          <ul><li>Bis zu 5 Unterseiten</li><li>Galerie</li><li>SEO-Grundstruktur</li></ul>
-        </article>
-        <article class="price reveal">
-          <h3>Business</h3>
-          <strong>899 €</strong>
-          <p>Individueller Premium-Auftritt.</p>
-          <ul><li>Stärkeres Design</li><li>Animationen</li><li>Mehr Struktur</li></ul>
-        </article>
+        <article class="price reveal"><h3>Starter</h3><strong>349 €</strong><p>Onepage für kleine Unternehmen.</p><ul><li>Startseite</li><li>Kontakt</li><li>Mobil optimiert</li></ul></article>
+        <article class="price featured reveal"><div class="label">Beliebt</div><h3>Premium</h3><strong>599 €</strong><p>Mehrseitige Website mit starkem Auftritt.</p><ul><li>Bis zu 5 Unterseiten</li><li>Galerie</li><li>SEO-Grundstruktur</li></ul></article>
+        <article class="price reveal"><h3>Business</h3><strong>899 €</strong><p>Individueller Premium-Auftritt.</p><ul><li>Stärkeres Design</li><li>Animationen</li><li>Mehr Struktur</li></ul></article>
+      </div>
+    </section>
+
+    <section class="care-band reveal">
+      <div>
+        <p class="eyebrow">KARIVO Care</p>
+        <h2>Nach dem Launch bleibt deine Website gepflegt.</h2>
+      </div>
+      <div class="care-items">
+        <span>Care · 19 €/Monat</span>
+        <span>Care+ · 39 €/Monat</span>
+        <span>Care Pro · 69 €/Monat</span>
       </div>
     </section>
 
@@ -188,21 +146,35 @@
         <p class="eyebrow">Kontakt</p>
         <h2>Bereit für einen besseren ersten Eindruck?</h2>
         <p>Schick deine Branche und dein Ziel. KARIVO erstellt dir einen passenden Vorschlag.</p>
+        <div class="direct-contact">
+          <a href="mailto:hallo@karivo.web">hallo@karivo.web</a>
+          <a href="https://wa.me/491700000000?text=Hallo%20KARIVO%2C%20ich%20interessiere%20mich%20f%C3%BCr%20eine%20Website." target="_blank">WhatsApp anfragen</a>
+        </div>
       </div>
 
-      <form class="contact-form reveal">
-        <input type="text" placeholder="Name / Unternehmen">
-        <input type="email" placeholder="E-Mail">
-        <select>
-          <option>Welche Website brauchst du?</option>
+      <form class="contact-form reveal" name="karivo-anfrage" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/danke.html">
+        <input type="hidden" name="form-name" value="karivo-anfrage">
+        <p class="hidden"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+        <input type="text" name="name" placeholder="Name / Unternehmen" required>
+        <input type="email" name="email" placeholder="E-Mail" required>
+        <input type="tel" name="telefon" placeholder="Telefon / WhatsApp">
+        <select name="branche" required>
+          <option value="">Welche Website brauchst du?</option>
           <option>Restaurant</option>
           <option>Fahrschule</option>
           <option>Handwerker</option>
           <option>Friseur / Beauty</option>
           <option>Andere Branche</option>
         </select>
-        <textarea placeholder="Was soll deine Website erreichen?"></textarea>
-        <button type="button">Anfrage senden</button>
+        <select name="paket">
+          <option value="">Interessantes Paket?</option>
+          <option>Starter · 349 €</option>
+          <option>Premium · 599 €</option>
+          <option>Business · 899 €</option>
+          <option>Noch unsicher</option>
+        </select>
+        <textarea name="nachricht" placeholder="Was soll deine Website erreichen?" required></textarea>
+        <button type="submit">Anfrage senden</button>
       </form>
     </section>
   </main>
