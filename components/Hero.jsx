@@ -20,7 +20,7 @@ export default function Hero() {
       <motion.div className="lightBeam" animate={{ x: ["-20%", "20%", "-20%"], opacity: [0.18, 0.34, 0.18] }} transition={{ duration: 9, repeat: Infinity }} />
 
       <motion.div className="heroCopy" initial={{ opacity: 0, y: 44, filter: "blur(14px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 0.9, delay: 1 }}>
-        <span className="badge">KARIVO X 2.4 · Premium Websites</span>
+        <span className="badge">KARIVO X 2.5 · Website + Care</span>
         <h1>Premium-Websites für lokale Unternehmen.</h1>
         <p>KARIVO erstellt moderne Websites für Restaurants, Fahrschulen, Handwerker und lokale Unternehmen — hochwertig, mobil optimiert und mit klaren monatlichen Care-Paketen.</p>
         <div className="actions">

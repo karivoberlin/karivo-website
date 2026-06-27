@@ -807,3 +807,197 @@ footer{
   .comboGrid{grid-template-columns:1fr}
   .comboPlus{margin:auto}
 }
+
+
+/* KARIVO X 2.5 Danke-Seite & Submit Polish */
+.formHint{
+  color:#9fa0aa;
+  font-size:12px;
+  text-align:center;
+}
+.successButton{
+  background:linear-gradient(135deg,#27c56e,#0f8c48)!important;
+  box-shadow:0 20px 70px rgba(39,197,110,.24)!important;
+}
+.thanksPage{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+  background:#070708;
+  color:var(--white);
+  padding:120px 6% 40px;
+}
+.thanksAurora{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(80px);
+  opacity:.36;
+  pointer-events:none;
+}
+.thanksAuroraA{
+  width:620px;
+  height:620px;
+  background:rgba(212,175,55,.24);
+  right:-120px;
+  top:-130px;
+}
+.thanksAuroraB{
+  width:380px;
+  height:380px;
+  background:rgba(255,255,255,.10);
+  left:-90px;
+  bottom:80px;
+}
+.thanksHero{
+  position:relative;
+  z-index:2;
+  max-width:980px;
+  margin:0 auto 44px;
+  text-align:center;
+}
+.successIcon{
+  width:92px;
+  height:92px;
+  margin:0 auto 22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg,#27c56e,#0f8c48);
+  color:white;
+  font-size:46px;
+  font-weight:900;
+  box-shadow:0 25px 90px rgba(39,197,110,.25);
+}
+.thanksHero h1{
+  font-size:clamp(46px,7vw,92px);
+  line-height:.9;
+  letter-spacing:-4px;
+  margin:16px 0;
+}
+.thanksSubtitle{
+  max-width:760px;
+  margin:0 auto;
+  color:#c9cad2;
+  font-size:19px;
+  line-height:1.7;
+}
+.nextSteps{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+  margin:0 auto 34px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.step{
+  border:1px solid var(--line);
+  border-radius:28px;
+  padding:24px;
+  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.032));
+}
+.step.active{
+  border-color:rgba(39,197,110,.45);
+}
+.step span{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(212,175,55,.42);
+  color:var(--gold);
+  font-weight:900;
+  margin-bottom:24px;
+}
+.step.active span{
+  background:#27c56e;
+  color:white;
+  border-color:#27c56e;
+}
+.step h3{
+  font-size:24px;
+  margin-bottom:8px;
+}
+.step p{
+  color:#c3c4cc;
+  line-height:1.6;
+}
+.thanksPanel{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+  margin:0 auto 34px;
+  border:1px solid rgba(212,175,55,.28);
+  border-radius:36px;
+  padding:40px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 0,rgba(212,175,55,.14),transparent 35%),
+    linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));
+}
+.thanksPanel h2{
+  font-size:clamp(34px,5vw,64px);
+  line-height:1;
+  margin:10px 0 14px;
+}
+.thanksPanel p{
+  color:#c6c7cf;
+  max-width:720px;
+  margin:0 auto 26px;
+}
+.socialButtons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:24px 0;
+}
+.socialButtons a,
+.whatsappButton,
+.thanksFooter a{
+  text-decoration:none;
+  border-radius:999px;
+  padding:14px 20px;
+  border:1px solid var(--line);
+  font-weight:900;
+  background:rgba(255,255,255,.055);
+  transition:.25s;
+}
+.socialButtons a:hover,
+.whatsappButton:hover,
+.thanksFooter a:hover{
+  transform:translateY(-2px);
+  border-color:rgba(212,175,55,.48);
+}
+.whatsappButton{
+  display:inline-flex;
+  background:linear-gradient(135deg,#27c56e,#0f8c48);
+  color:white;
+  border:0;
+}
+.thanksFooter{
+  position:relative;
+  z-index:2;
+  max-width:1120px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  border-top:1px solid var(--line);
+  padding-top:24px;
+  color:#aaa;
+}
+.thanksFooter strong{
+  color:white;
+  letter-spacing:8px;
+}
+@media(max-width:1050px){
+  .thanksPage{padding:100px 5% 32px}
+  .nextSteps{grid-template-columns:1fr}
+  .thanksPanel{padding:30px 20px}
+  .thanksFooter{display:grid;text-align:center;justify-content:center}
+}

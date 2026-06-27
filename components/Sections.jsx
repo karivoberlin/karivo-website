@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useState } from "react";
 
 const fade = {
   initial: { opacity: 0, y: 34, filter: "blur(10px)" },
@@ -228,27 +229,62 @@ export function Pricing() {
 }
 
 export function Contact() {
+  const [status, setStatus] = useState("idle");
+
+  function handleSubmit() {
+    setStatus("sending");
+    setTimeout(() => setStatus("success"), 500);
+  }
+
   return (
     <section className="contact" id="kontakt">
       <motion.div {...fade}>
         <p className="eyebrow">Kontakt</p>
         <h2>Bereit für deine neue Website?</h2>
-        <p>Schick deine Branche, dein gewünschtes Paket und ob du monatliche Betreuung möchtest.</p>
+        <p>Schick deine Branche, dein gewünschtes Website-Paket und ob du monatliche Betreuung möchtest.</p>
       </motion.div>
 
-      <motion.form className="contactForm" name="karivo-anfrage" method="POST" data-netlify="true" action="/danke" {...fade}>
+      <motion.form
+        className="contactForm"
+        name="karivo-anfrage"
+        method="POST"
+        data-netlify="true"
+        action="/danke"
+        onSubmit={handleSubmit}
+        {...fade}
+      >
         <input type="hidden" name="form-name" value="karivo-anfrage" />
+
         <input name="name" placeholder="Name / Unternehmen" required />
         <input name="email" type="email" placeholder="E-Mail" required />
         <input name="telefon" placeholder="Telefon / WhatsApp" />
+
         <select name="paket">
-          <option>Starter · 349 €</option><option>Premium · 599 €</option><option>Business · 899 €</option><option>Noch unsicher</option>
+          <option>Starter · 349 €</option>
+          <option>Premium · 599 €</option>
+          <option>Business · 899 €</option>
+          <option>Noch unsicher</option>
         </select>
+
         <select name="care">
-          <option>Care+ · 39 €/Monat empfohlen</option><option>Care · 19 €/Monat</option><option>Care Pro · 69 €/Monat</option><option>Keine Betreuung</option><option>Noch unsicher</option>
+          <option>Care+ · 39 €/Monat empfohlen</option>
+          <option>Care · 19 €/Monat</option>
+          <option>Care Pro · 69 €/Monat</option>
+          <option>Keine Betreuung</option>
+          <option>Noch unsicher</option>
         </select>
+
         <textarea name="nachricht" placeholder="Welche Website brauchst du und was soll enthalten sein?" required />
-        <button type="submit">Anfrage senden</button>
+
+        <button type="submit" className={status === "success" ? "successButton" : ""}>
+          {status === "sending" && "Anfrage wird gesendet..."}
+          {status === "success" && "✓ Anfrage erfolgreich versendet"}
+          {status === "idle" && "Anfrage senden"}
+        </button>
+
+        <small className="formHint">
+          Nach dem Absenden wirst du zur Danke-Seite weitergeleitet.
+        </small>
       </motion.form>
     </section>
   );

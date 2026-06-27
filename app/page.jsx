@@ -23,7 +23,7 @@ export default function Home() {
       <Pricing />
       <Contact />
       <footer>
-        <strong>KARIVO X 2.4</strong>
+        <strong>KARIVO X 2.5</strong>
         <span>Websites, die Kunden überzeugen.</span>
       </footer>
     </>
