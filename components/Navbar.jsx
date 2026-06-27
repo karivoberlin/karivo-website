@@ -1,14 +1,22 @@
+import { motion } from "framer-motion";
+
 export default function Navbar() {
   return (
-    <nav className="nav">
+    <motion.nav
+      className="nav"
+      initial={{ opacity: 0, y: -18 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.65 }}
+    >
       <a className="brand" href="#start">KARIVO</a>
       <div className="navLinks">
         <a href="#leistungen">Leistungen</a>
         <a href="#portfolio">Portfolio</a>
+        <a href="#prozess">Ablauf</a>
         <a href="#preise">Preise</a>
         <a href="#kontakt">Kontakt</a>
       </div>
       <a className="navCta" href="#kontakt">Projekt anfragen</a>
-    </nav>
+    </motion.nav>
   );
 }

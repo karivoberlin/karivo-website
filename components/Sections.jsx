@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 
 const fade = {
-  initial: { opacity: 0, y: 32 },
-  whileInView: { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 34, filter: "blur(10px)" },
+  whileInView: { opacity: 1, y: 0, filter: "blur(0px)" },
   viewport: { once: true, amount: 0.2 },
-  transition: { duration: 0.65 }
+  transition: { duration: 0.7 }
 };
 
 export function Services() {
@@ -20,10 +20,11 @@ export function Services() {
       <motion.div className="sectionHead" {...fade}>
         <p className="eyebrow">Leistungen</p>
         <h2>Ein hochwertiger Auftritt muss nicht kompliziert sein.</h2>
+        <p>Du bekommst Struktur, Design, Technik und klare Kontaktwege aus einer Hand.</p>
       </motion.div>
       <div className="cardGrid">
         {items.map(([title, text], index) => (
-          <motion.article className="card" key={title} {...fade}>
+          <motion.article className="card premiumCard" key={title} {...fade}>
             <span>0{index + 1}</span>
             <h3>{title}</h3>
             <p>{text}</p>
@@ -31,6 +32,17 @@ export function Services() {
         ))}
       </div>
     </section>
+  );
+}
+
+export function Trust() {
+  return (
+    <motion.section className="trustWall" {...fade}>
+      <div><strong>3</strong><span>klare Pakete</span></div>
+      <div><strong>5–10</strong><span>Tage Umsetzung</span></div>
+      <div><strong>100%</strong><span>mobil optimiert</span></div>
+      <div><strong>Care</strong><span>Betreuung möglich</span></div>
+    </motion.section>
   );
 }
 
@@ -46,14 +58,45 @@ export function Portfolio() {
       <motion.div className="sectionHead left" {...fade}>
         <p className="eyebrow">Portfolio</p>
         <h2>Demo-Projekte, die sofort zeigen, was möglich ist.</h2>
+        <p>Später ersetzt du diese Demos durch echte Kundenprojekte und Case Studies.</p>
       </motion.div>
       <div className="projectGrid">
         {projects.map(([title, text]) => (
-          <motion.article className="projectCard" key={title} {...fade}>
+          <motion.article className="projectCard premiumCard" key={title} {...fade}>
+            <div className="browserMock">
+              <div /><div /><div />
+            </div>
             <small>KARIVO DEMO</small>
             <h3>{title}</h3>
             <p>{text}</p>
             <a href="#kontakt">Demo anfragen →</a>
+          </motion.article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function Process() {
+  const steps = [
+    ["01", "Analyse", "Wir klären Branche, Ziel, Stil und Inhalte."],
+    ["02", "Design", "Du bekommst einen hochwertigen ersten Entwurf."],
+    ["03", "Umsetzung", "Website, Kontaktwege und Mobile-Version werden fertiggestellt."],
+    ["04", "Launch", "Die Website geht online und kann betreut werden."]
+  ];
+
+  return (
+    <section className="section" id="prozess">
+      <motion.div className="sectionHead" {...fade}>
+        <p className="eyebrow">Ablauf</p>
+        <h2>Einfacher Prozess. Hochwertiges Ergebnis.</h2>
+      </motion.div>
+      <div className="processGrid">
+        {steps.map(([num, title, text]) => (
+          <motion.article className="processCard" key={title} {...fade}>
+            <b>{num}</b>
+            <h3>{title}</h3>
+            <p>{text}</p>
           </motion.article>
         ))}
       </div>
@@ -81,6 +124,11 @@ export function Pricing() {
             <h3>{name}</h3>
             <strong>{price}</strong>
             <p>{desc}</p>
+            <ul>
+              <li>Mobil optimiert</li>
+              <li>Kontaktfokus</li>
+              <li>Premium-Look</li>
+            </ul>
           </motion.article>
         ))}
       </div>
