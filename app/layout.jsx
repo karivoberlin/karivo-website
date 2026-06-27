@@ -1,8 +1,8 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "KARIVO X | Premium Websites für lokale Unternehmen",
-  description: "KARIVO erstellt moderne Premium-Websites für lokale Unternehmen.",
+  title: "KARIVO | Premium digitale Auftritte für lokale Unternehmen",
+  description: "KARIVO sorgt für professionelle digitale Auftritte, mehr Vertrauen und mehr Anfragen für lokale Unternehmen.",
 };
 
 export default function RootLayout({ children }) {

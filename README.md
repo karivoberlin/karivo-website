@@ -1,25 +1,27 @@
-# KARIVO X 2.3
+# KARIVO X 2.4
 
-Modernes Next.js/React-Projekt für KARIVO.
+Großer Premium-Meilenstein.
 
-## Neu in 2.3
-- Website-Konfigurator-Vorschau
-- interaktive Branchen-/Stil-/Paket-Auswahl
-- stärkere Portfolio-Cards mit Paket-Tags
-- Hero CTA auf Konfigurator angepasst
-- weitere Premium-Conversion-Struktur
+## Neu in 2.4
+- Neue Positionierung: nicht „Website erstellen“, sondern „mehr Anfragen & Vertrauen“
+- Cinematic Hero mit MacBook + Phone
+- Problem-/Lösungsstruktur
+- Case-Study-Sektion
+- Device Showcase
+- Testimonials
+- Final CTA
+- Premium Mobile-Anpassungen
+- Next.js + React + Framer Motion
 
-## Lokal starten
+## Starten
 ```bash
 npm install
 npm run dev
 ```
 
 ## Deployment
-Am besten mit Vercel:
+Empfohlen: Vercel über GitHub.
 
-1. ZIP entpacken
-2. Dateien in GitHub hochladen
-3. Vercel mit GitHub verbinden
-4. Framework: Next.js
-5. Deploy
+## Wichtig
+- E-Mail / WhatsApp / rechtliche Seiten später final ergänzen
+- Demo-Cases später durch echte Kundenprojekte ersetzen
