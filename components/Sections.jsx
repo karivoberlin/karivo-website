@@ -79,36 +79,83 @@ export function Portfolio() {
   );
 }
 
+
+export function PackageComboSection() {
+  return (
+    <section className="packageCombo">
+      <motion.div className="sectionHead" {...fade}>
+        <p className="eyebrow">So funktioniert es</p>
+        <h2>Website-Paket wählen. Care-Paket ergänzen. Fertig.</h2>
+        <p>Das Website-Paket ist der einmalige Aufbau. Das Care-Paket ist die monatliche Betreuung danach.</p>
+      </motion.div>
+      <div className="comboGrid">
+        <motion.div className="comboBox" {...fade}>
+          <span>Einmalig</span>
+          <h3>Website-Paket</h3>
+          <p>Starter, Premium oder Business – je nachdem wie umfangreich der Auftritt werden soll.</p>
+        </motion.div>
+        <motion.div className="comboPlus" {...fade}>+</motion.div>
+        <motion.div className="comboBox" {...fade}>
+          <span>Monatlich</span>
+          <h3>Care-Paket</h3>
+          <p>Care, Care+ oder Care Pro – damit die Website dauerhaft aktuell und gepflegt bleibt.</p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+
 export function CareSection() {
   const care = [
-    ["Care", "19 €/Monat", "Für kleine Änderungen wie Texte, Öffnungszeiten oder einzelne Bilder."],
-    ["Care+", "39 €/Monat", "Für regelmäßige Pflege, kleine Erweiterungen und schnellere Anpassungen."],
-    ["Care Pro", "69 €/Monat", "Für Unternehmen, die dauerhaft betreut werden wollen."]
+    [
+      "Care",
+      "19 €/Monat",
+      "Für Unternehmen, die nur gelegentlich kleine Änderungen brauchen.",
+      ["1 kleine Änderung pro Monat", "Texte oder Öffnungszeiten anpassen", "Basis-Pflege der Website"]
+    ],
+    [
+      "Care+",
+      "39 €/Monat",
+      "Der beste Standard für die meisten lokalen Unternehmen.",
+      ["Bis zu 3 kleine Änderungen pro Monat", "Bilder, Texte oder Angebote aktualisieren", "Priorisierte Bearbeitung"]
+    ],
+    [
+      "Care Pro",
+      "69 €/Monat",
+      "Für Unternehmen, die dauerhaft aktiv und aktuell wirken wollen.",
+      ["Bis zu 6 Änderungen pro Monat", "Neue Bereiche oder Aktionen einpflegen", "Schnellere Betreuung & Monatscheck"]
+    ]
   ];
 
   return (
     <section className="careSection" id="care">
       <motion.div className="sectionHead" {...fade}>
-        <p className="eyebrow">Monatliche Betreuung</p>
-        <h2>Nach dem Launch bleibt deine Website aktuell.</h2>
-        <p>Eine gute Website ist kein einmaliges Ding. Mit KARIVO Care bleiben Inhalte, Bilder und Kontaktwege gepflegt.</p>
+        <p className="eyebrow">KARIVO Care</p>
+        <h2>Deine Website bleibt nach dem Launch gepflegt.</h2>
+        <p>Care ist die monatliche Betreuung für Änderungen, Inhalte und Pflege. Du kannst jedes Website-Paket mit einem Care-Paket kombinieren.</p>
       </motion.div>
 
       <div className="careGrid">
-        {care.map(([name, price, text], index) => (
+        {care.map(([name, price, text, features], index) => (
           <motion.article className={index === 1 ? "careCard featured" : "careCard"} key={name} {...fade}>
             {index === 1 && <div className="label">Empfohlen</div>}
             <h3>{name}</h3>
             <strong>{price}</strong>
             <p>{text}</p>
             <ul>
-              <li>Inhalte aktualisieren</li>
-              <li>Kleine Änderungen</li>
-              <li>Website gepflegt halten</li>
+              {features.map((feature) => <li key={feature}>{feature}</li>)}
             </ul>
           </motion.article>
         ))}
       </div>
+
+      <motion.div className="careCombo" {...fade}>
+        <p className="eyebrow">Beliebte Kombination</p>
+        <h3>Premium Website + Care+</h3>
+        <p>Einmalig 599 € für die Website und 39 €/Monat für laufende Pflege. Ideal für Restaurants, Fahrschulen, Handwerker und lokale Dienstleister.</p>
+        <a href="#kontakt" className="btn primary">Diese Kombination anfragen</a>
+      </motion.div>
     </section>
   );
 }
@@ -198,7 +245,7 @@ export function Contact() {
           <option>Starter · 349 €</option><option>Premium · 599 €</option><option>Business · 899 €</option><option>Noch unsicher</option>
         </select>
         <select name="care">
-          <option>Care · 19 €/Monat</option><option>Care+ · 39 €/Monat</option><option>Care Pro · 69 €/Monat</option><option>Keine Betreuung</option>
+          <option>Care+ · 39 €/Monat empfohlen</option><option>Care · 19 €/Monat</option><option>Care Pro · 69 €/Monat</option><option>Keine Betreuung</option><option>Noch unsicher</option>
         </select>
         <textarea name="nachricht" placeholder="Welche Website brauchst du und was soll enthalten sein?" required />
         <button type="submit">Anfrage senden</button>

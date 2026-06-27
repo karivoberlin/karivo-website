@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Preloader from "../components/Preloader";
 import CursorGlow from "../components/CursorGlow";
-import { Services, Trust, Portfolio, CareSection, Process, SalesBand, Pricing, Contact } from "../components/Sections";
+import { Services, Trust, Portfolio, PackageComboSection, CareSection, Process, SalesBand, Pricing, Contact } from "../components/Sections";
 
 export default function Home() {
   return (
@@ -16,6 +16,7 @@ export default function Home() {
       <Services />
       <Trust />
       <Portfolio />
+      <PackageComboSection />
       <CareSection />
       <Process />
       <SalesBand />

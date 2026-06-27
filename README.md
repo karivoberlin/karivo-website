@@ -1,10 +1,13 @@
-# KARIVO X 2.4 Normal Concept
+# KARIVO X 2.4 Care Pakete
 
-Zurück zum normalen KARIVO-Konzept:
-- Kunden kaufen Website-Pakete
-- Care-Pakete als monatliche Betreuung
-- keine kostenlose Analyse-Positionierung
-- Fokus auf Starter / Premium / Business + Care / Care+ / Care Pro
+Normales KARIVO-Konzept mit deutlich sichtbaren Care-Paketen.
+
+## Enthalten
+- Website-Pakete: Starter, Premium, Business
+- Care-Pakete: Care, Care+, Care Pro
+- Erklärung: einmaliges Website-Paket + monatliches Care-Paket
+- Beliebte Kombination: Premium Website + Care+
+- Formular mit Care-Auswahl
 
 ## Starten
 ```bash
