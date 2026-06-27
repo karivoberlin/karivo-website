@@ -204,9 +204,33 @@ export function FAQ() {
 export function Contact() {
   const [status, setStatus] = useState("idle");
 
-  function handleSubmit() {
+  async function handleSubmit(event) {
+    event.preventDefault();
     setStatus("sending");
-    setTimeout(() => setStatus("success"), 600);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formspree.io/f/mkolbovw", {
+        method: "POST",
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setTimeout(() => {
+          window.location.href = "/danke";
+        }, 1300);
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
   }
 
   return (
@@ -217,8 +241,7 @@ export function Contact() {
         <p>Schick deine Branche, dein gewünschtes Website-Paket und ob du monatliche Betreuung möchtest.</p>
       </motion.div>
 
-      <motion.form className="contactForm" name="karivo-anfrage" method="POST" data-netlify="true" action="/danke" onSubmit={handleSubmit} {...reveal}>
-        <input type="hidden" name="form-name" value="karivo-anfrage" />
+      <motion.form className="contactForm" onSubmit={handleSubmit} {...reveal}>
         <input name="name" placeholder="Name / Unternehmen" required />
         <input name="email" type="email" placeholder="E-Mail" required />
         <input name="telefon" placeholder="Telefon / WhatsApp" />
@@ -240,13 +263,24 @@ export function Contact() {
 
         <textarea name="nachricht" placeholder="Welche Website brauchst du und was soll enthalten sein?" required />
 
-        <button type="submit" className={status === "success" ? "successButton" : ""}>
+        <button type="submit" disabled={status === "sending" || status === "success"} className={status === "success" ? "successButton" : ""}>
           {status === "idle" && "Anfrage senden"}
           {status === "sending" && "Anfrage wird gesendet..."}
           {status === "success" && "✓ Anfrage erfolgreich versendet"}
+          {status === "error" && "Fehler – bitte nochmal versuchen"}
         </button>
 
-        <small>Nach dem Absenden wirst du zur Danke-Seite weitergeleitet.</small>
+        {status === "success" && (
+          <small className="successHint">Du wirst automatisch zur Danke-Seite weitergeleitet.</small>
+        )}
+
+        {status === "error" && (
+          <small className="errorHint">Die Anfrage konnte nicht gesendet werden. Bitte prüfe deine Verbindung oder schreibe direkt per WhatsApp.</small>
+        )}
+
+        {status === "idle" && (
+          <small>Deine Anfrage wird sicher über Formspree an KARIVO gesendet.</small>
+        )}
       </motion.form>
     </section>
   );

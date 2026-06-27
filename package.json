@@ -1,6 +1,6 @@
 {
-  "name": "karivo-x-3-0-final",
-  "version": "3.0.0",
+  "name": "karivo-x-3-1-formspree-final",
+  "version": "3.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

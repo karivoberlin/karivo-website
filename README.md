@@ -1,19 +1,16 @@
-# KARIVO X 3.0 Final
+# KARIVO X 3.1 Final — Formspree integriert
 
-Finale, stabile Next.js-Version.
+Finale Vercel-Version mit funktionierendem Anfrageformular.
 
-## Enthalten
-- Premium Hero
-- Website-Pakete
-- Care-Pakete
-- Beliebte Kombi: Premium + Care+
-- Beispiele
-- Ablauf
-- FAQ
-- Anfrageformular mit Status-Button
-- professionelle Danke-Seite
-- Social-Media-Platzhalter
-- WhatsApp-Platzhalter
+## Neu
+- Formspree integriert: https://formspree.io/f/mkolbovw
+- Keine Netlify-Form-Reste
+- Formular sendet per Fetch an Formspree
+- Button zeigt:
+  - Anfrage wird gesendet...
+  - ✓ Anfrage erfolgreich versendet
+  - Fehlerhinweis bei Problem
+- automatische Weiterleitung auf /danke
 
 ## Starten
 ```bash
@@ -22,7 +19,7 @@ npm run dev
 ```
 
 ## Deployment
-Vercel über GitHub.
+GitHub hochladen → Vercel baut automatisch.
 
 ## Später ersetzen
 - Instagram-Link
