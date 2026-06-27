@@ -49,3 +49,41 @@ document.querySelectorAll('.magnetic').forEach((el) => {
     el.style.transform = 'translate(0,0)';
   });
 });
+
+const calcIndustry = document.getElementById('calcIndustry');
+const calcPackage = document.getElementById('calcPackage');
+const calcCare = document.getElementById('calcCare');
+const calcHosting = document.getElementById('calcHosting');
+const oneTimePrice = document.getElementById('oneTimePrice');
+const monthlyPrice = document.getElementById('monthlyPrice');
+const calcSummary = document.getElementById('calcSummary');
+const calcInput = document.getElementById('calcInput');
+const formIndustry = document.getElementById('formIndustry');
+const formPackage = document.getElementById('formPackage');
+
+function updateCalculator() {
+  if (!calcPackage || !calcCare || !calcHosting) return;
+  const industry = calcIndustry.value;
+  const packagePrice = Number(calcPackage.value);
+  const care = Number(calcCare.value);
+  const hosting = Number(calcHosting.value);
+  const monthly = care + hosting;
+  const packageText = calcPackage.options[calcPackage.selectedIndex].text;
+  const careText = calcCare.options[calcCare.selectedIndex].text;
+  const hostingText = calcHosting.options[calcHosting.selectedIndex].text;
+
+  oneTimePrice.textContent = packagePrice + ' €';
+  monthlyPrice.textContent = monthly + ' €';
+  calcSummary.textContent = `${packageText} für ${industry} mit ${careText} und ${hostingText}.`;
+
+  if (calcInput) calcInput.value = calcSummary.textContent + ` Einmalig: ${packagePrice} €, monatlich: ${monthly} €.`;
+  if (formIndustry) formIndustry.value = industry;
+  if (formPackage) {
+    [...formPackage.options].forEach(option => {
+      if (packageText.includes(option.textContent.split(' · ')[0])) formPackage.value = option.textContent;
+    });
+  }
+}
+
+[calcIndustry, calcPackage, calcCare, calcHosting].forEach(el => el?.addEventListener('change', updateCalculator));
+updateCalculator();

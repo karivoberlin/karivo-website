@@ -26,7 +26,7 @@
     <div class="nav-links" id="navLinks">
       <a href="#leistungen">Leistungen</a>
       <a href="#projekte">Projekte</a>
-      <a href="#prozess">Ablauf</a>
+      <a href="#rechner">Kalkulator</a>
       <a href="#preise">Preise</a>
       <a href="#kontakt">Kontakt</a>
     </div>
@@ -43,7 +43,7 @@
       <h1 class="reveal">Digitale Auftritte, die sofort hochwertig wirken.</h1>
       <p class="reveal">KARIVO baut moderne Websites für lokale Unternehmen — minimalistisch, schnell, mobil optimiert und so gestaltet, dass Besucher Vertrauen gewinnen.</p>
       <div class="actions reveal">
-        <a class="btn primary magnetic" href="#kontakt">Projekt starten</a>
+        <a class="btn primary magnetic" href="#rechner">Preis einschätzen</a>
         <a class="btn secondary magnetic" href="#projekte">Projekte ansehen</a>
       </div>
       <div class="micro-proof reveal">
@@ -139,6 +139,61 @@
       </div>
     </section>
 
+    <section class="calculator-section" id="rechner">
+      <div class="section-title reveal">
+        <p class="eyebrow">Website-Kalkulator</p>
+        <h2>In 20 Sekunden zur ersten Preiseinschätzung.</h2>
+        <p>Der Kalkulator ersetzt kein Angebot, gibt aber sofort eine klare Richtung.</p>
+      </div>
+
+      <div class="calculator reveal">
+        <div class="calc-options">
+          <label>Branche
+            <select id="calcIndustry">
+              <option>Restaurant</option>
+              <option>Fahrschule</option>
+              <option>Handwerker</option>
+              <option>Friseur / Beauty</option>
+              <option>Andere Branche</option>
+            </select>
+          </label>
+
+          <label>Paket
+            <select id="calcPackage">
+              <option value="349">Starter · 349 €</option>
+              <option value="599" selected>Premium · 599 €</option>
+              <option value="899">Business · 899 €</option>
+            </select>
+          </label>
+
+          <label>Betreuung
+            <select id="calcCare">
+              <option value="0">Keine Betreuung</option>
+              <option value="19">Care · 19 €/Monat</option>
+              <option value="39" selected>Care+ · 39 €/Monat</option>
+              <option value="69">Care Pro · 69 €/Monat</option>
+            </select>
+          </label>
+
+          <label>Hosting
+            <select id="calcHosting">
+              <option value="0">Eigenes Hosting</option>
+              <option value="15" selected>Hosting über KARIVO · 15 €/Monat</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="calc-result">
+          <span>Einmalig ab</span>
+          <strong id="oneTimePrice">599 €</strong>
+          <span>Monatlich ab</span>
+          <strong id="monthlyPrice">54 €</strong>
+          <p id="calcSummary">Premium Website für Restaurant mit Care+ und Hosting.</p>
+          <a href="#kontakt" class="btn primary">Anfrage mit Auswahl senden</a>
+        </div>
+      </div>
+    </section>
+
     <section class="why-section">
       <div class="section-title reveal">
         <p class="eyebrow">Warum KARIVO?</p>
@@ -218,7 +273,7 @@
         <input type="text" name="name" placeholder="Name / Unternehmen" required>
         <input type="email" name="email" placeholder="E-Mail" required>
         <input type="tel" name="telefon" placeholder="Telefon / WhatsApp">
-        <select name="branche" required>
+        <select name="branche" required id="formIndustry">
           <option value="">Welche Website brauchst du?</option>
           <option>Restaurant</option>
           <option>Fahrschule</option>
@@ -226,13 +281,14 @@
           <option>Friseur / Beauty</option>
           <option>Andere Branche</option>
         </select>
-        <select name="paket">
+        <select name="paket" id="formPackage">
           <option value="">Interessantes Paket?</option>
           <option>Starter · 349 €</option>
           <option>Premium · 599 €</option>
           <option>Business · 899 €</option>
           <option>Noch unsicher</option>
         </select>
+        <input type="text" name="kalkulator" id="calcInput" placeholder="Kalkulator-Auswahl wird automatisch ergänzt" readonly>
         <textarea name="nachricht" placeholder="Was soll deine Website erreichen?" required></textarea>
         <small>Mit dem Absenden erklärst du dich einverstanden, dass KARIVO dich zur Anfrage kontaktieren darf.</small>
         <button type="submit">Anfrage senden</button>
