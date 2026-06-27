@@ -6,3 +6,16 @@ const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(ent
 document.querySelectorAll('.magnetic').forEach(el=>{el.addEventListener('mousemove',e=>{const r=el.getBoundingClientRect();const x=e.clientX-r.left-r.width/2;const y=e.clientY-r.top-r.height/2;el.style.transform=`translate(${x*.12}px, ${y*.18}px)`;});el.addEventListener('mouseleave',()=>{el.style.transform='translate(0,0)';});});
 const calcIndustry=document.getElementById('calcIndustry'),calcPackage=document.getElementById('calcPackage'),calcCare=document.getElementById('calcCare'),calcHosting=document.getElementById('calcHosting'),oneTimePrice=document.getElementById('oneTimePrice'),monthlyPrice=document.getElementById('monthlyPrice'),calcSummary=document.getElementById('calcSummary'),calcInput=document.getElementById('calcInput'),formIndustry=document.getElementById('formIndustry'),formPackage=document.getElementById('formPackage');
 function updateCalculator(){if(!calcPackage)return;const industry=calcIndustry.value;const packagePrice=Number(calcPackage.value);const care=Number(calcCare.value);const hosting=Number(calcHosting.value);const monthly=care+hosting;const packageText=calcPackage.options[calcPackage.selectedIndex].text;const careText=calcCare.options[calcCare.selectedIndex].text;const hostingText=calcHosting.options[calcHosting.selectedIndex].text;oneTimePrice.textContent=packagePrice+' €';monthlyPrice.textContent=monthly+' €';calcSummary.textContent=`${packageText} für ${industry} mit ${careText} und ${hostingText}.`;if(calcInput)calcInput.value=calcSummary.textContent+` Einmalig: ${packagePrice} €, monatlich: ${monthly} €.`;if(formIndustry)formIndustry.value=industry;if(formPackage){[...formPackage.options].forEach(o=>{if(packageText.includes(o.textContent.split(' · ')[0]))formPackage.value=o.textContent;});}}[calcIndustry,calcPackage,calcCare,calcHosting].forEach(el=>el?.addEventListener('change',updateCalculator));updateCalculator();
+
+// KARIVO 1.1 active nav hint
+const sections = [...document.querySelectorAll('section[id], header[id]')];
+const navAnchors = [...document.querySelectorAll('.nav-links a')];
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 160) current = section.id;
+  });
+  navAnchors.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
