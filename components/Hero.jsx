@@ -17,6 +17,10 @@ export default function Hero() {
       <div className="aurora auroraOne" />
       <div className="aurora auroraTwo" />
       <div className="gridGlow" />
+      <div className="starField" />
+      <motion.div className="spaceOrb orbOne" animate={{ y: [-18, 18, -18], rotate: [0, 18, 0] }} transition={{ repeat: Infinity, duration: 7 }} />
+      <motion.div className="spaceOrb orbTwo" animate={{ y: [14, -20, 14], rotate: [0, -22, 0] }} transition={{ repeat: Infinity, duration: 8 }} />
+      <motion.div className="holoPyramid" animate={{ rotateY: [0, 360] }} transition={{ repeat: Infinity, duration: 18, ease: "linear" }} />
 
       <motion.div
         className="heroText"
@@ -51,6 +55,8 @@ export default function Hero() {
         transition={{ duration: 0.9, delay: 0.15 }}
       >
         <div className="deviceStage">
+          <div className="depthPlate depthPlateOne" />
+          <div className="depthPlate depthPlateTwo" />
           <div className="macbook">
             <div className="browserTop">
               <i /><i /><i /><span>premium-demo.de</span>
@@ -72,6 +78,8 @@ export default function Hero() {
 
         <motion.div className="goldRing" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 18, ease: "linear" }} />
         <motion.div className="goldOrb" animate={{ y: [-12, 14, -12] }} transition={{ repeat: Infinity, duration: 6 }} />
+        <motion.div className="holoCard holoCardOne" animate={{ y: [0, -18, 0], rotateZ: [-4, 4, -4] }} transition={{ repeat: Infinity, duration: 6 }}>Website + Care</motion.div>
+        <motion.div className="holoCard holoCardTwo" animate={{ y: [0, 16, 0], rotateZ: [4, -4, 4] }} transition={{ repeat: Infinity, duration: 7 }}>Premium Auftritt</motion.div>
       </motion.div>
 
       <div className="heroStrip">

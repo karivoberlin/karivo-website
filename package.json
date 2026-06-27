@@ -1,6 +1,6 @@
 {
-  "name": "karivo-x-3-1-formspree-final",
-  "version": "3.1.0",
+  "name": "karivo-x-3-2-3d-effects-final",
+  "version": "3.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",

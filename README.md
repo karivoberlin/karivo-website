@@ -1,16 +1,13 @@
-# KARIVO X 3.1 Final — Formspree integriert
+# KARIVO X 3.2 — 3D Effects Final
 
-Finale Vercel-Version mit funktionierendem Anfrageformular.
-
-## Neu
-- Formspree integriert: https://formspree.io/f/mkolbovw
-- Keine Netlify-Form-Reste
-- Formular sendet per Fetch an Formspree
-- Button zeigt:
-  - Anfrage wird gesendet...
-  - ✓ Anfrage erfolgreich versendet
-  - Fehlerhinweis bei Problem
-- automatische Weiterleitung auf /danke
+Auf Basis von KARIVO X 3.1 mit:
+- stärkeren 3D/Space-Effekten
+- schwebenden Orbs
+- Hologramm-Karten
+- zusätzlicher Tiefenebene im Hero
+- Shine-Effekten auf MacBook und Buttons
+- 3D-Hover auf Cards
+- mobile Effekte reduziert für Performance
 
 ## Starten
 ```bash
@@ -19,11 +16,4 @@ npm run dev
 ```
 
 ## Deployment
-GitHub hochladen → Vercel baut automatisch.
-
-## Später ersetzen
-- Instagram-Link
-- TikTok-Link
-- LinkedIn-Link
-- WhatsApp-Link
-- Impressum / Datenschutz ergänzen
+GitHub → Vercel.

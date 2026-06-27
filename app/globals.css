@@ -142,3 +142,179 @@ button:disabled{
 .errorHint{
   color:#ff8d8d!important;
 }
+
+
+/* KARIVO X 3.2 — mehr 3D / Space Effekte */
+.starField{
+  position:absolute;
+  inset:0;
+  opacity:.28;
+  background-image:
+    radial-gradient(circle at 12% 24%,rgba(255,255,255,.7) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 32% 72%,rgba(212,175,55,.6) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 78% 30%,rgba(255,255,255,.5) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 88% 82%,rgba(212,175,55,.55) 0 1px,transparent 1.5px);
+  background-size:360px 360px;
+  animation:starDrift 18s linear infinite;
+}
+.spaceOrb{
+  position:absolute;
+  z-index:2;
+  border-radius:50%;
+  pointer-events:none;
+  filter:drop-shadow(0 0 40px rgba(212,175,55,.25));
+}
+.orbOne{
+  width:120px;
+  height:120px;
+  left:7%;
+  top:24%;
+  background:
+    radial-gradient(circle at 30% 28%,#fff,var(--gold) 18%,#1a1a20 58%,#050506 72%);
+}
+.orbTwo{
+  width:72px;
+  height:72px;
+  right:8%;
+  bottom:23%;
+  background:
+    radial-gradient(circle at 32% 30%,#fff,var(--gold2) 20%,#111116 62%);
+  opacity:.85;
+}
+.holoPyramid{
+  position:absolute;
+  z-index:2;
+  width:95px;
+  height:95px;
+  right:42%;
+  top:22%;
+  clip-path:polygon(50% 0, 100% 100%, 0 100%);
+  background:linear-gradient(135deg,rgba(212,175,55,.45),rgba(255,255,255,.06));
+  border:1px solid rgba(212,175,55,.35);
+  filter:blur(.1px) drop-shadow(0 0 36px rgba(212,175,55,.18));
+  opacity:.75;
+}
+.deviceStage{
+  transform-style:preserve-3d;
+}
+.depthPlate{
+  position:absolute;
+  z-index:1;
+  border:1px solid rgba(212,175,55,.18);
+  border-radius:40px;
+  background:linear-gradient(135deg,rgba(212,175,55,.08),rgba(255,255,255,.025));
+  box-shadow:0 35px 120px rgba(0,0,0,.32);
+  pointer-events:none;
+}
+.depthPlateOne{
+  width:520px;
+  height:380px;
+  left:-28px;
+  top:28px;
+  transform:translateZ(-80px) rotateZ(-5deg);
+}
+.depthPlateTwo{
+  width:470px;
+  height:320px;
+  right:-42px;
+  bottom:-20px;
+  transform:translateZ(-130px) rotateZ(7deg);
+  opacity:.65;
+}
+.macbook{
+  transform-style:preserve-3d;
+}
+.macbook:before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  border-radius:38px;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.18),transparent);
+  transform:translateX(-120%);
+  animation:screenShine 5.6s ease-in-out infinite;
+  pointer-events:none;
+}
+.screenHero{
+  position:relative;
+  overflow:hidden;
+}
+.screenHero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 80% 25%,rgba(255,255,255,.18),transparent 28%),
+    linear-gradient(120deg,transparent,rgba(255,255,255,.12),transparent);
+  mix-blend-mode:screen;
+}
+.holoCard{
+  position:absolute;
+  z-index:5;
+  border:1px solid rgba(212,175,55,.34);
+  border-radius:18px;
+  padding:13px 16px;
+  background:rgba(7,7,8,.68);
+  backdrop-filter:blur(18px);
+  color:var(--gold2);
+  font-size:13px;
+  font-weight:900;
+  box-shadow:0 22px 80px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.08);
+}
+.holoCardOne{
+  left:-28px;
+  top:115px;
+}
+.holoCardTwo{
+  right:-32px;
+  bottom:100px;
+}
+.card,.priceCard,.careCard,.caseCard,.stepCard,.comboBox,details,.contactForm{
+  transform-style:preserve-3d;
+}
+.card:hover,.priceCard:hover,.careCard:hover,.caseCard:hover,.stepCard:hover,.comboBox:hover{
+  transform:translateY(-8px) perspective(900px) rotateX(2deg) rotateY(-2deg);
+}
+.caseMock:after{
+  content:"";
+  position:absolute;
+  inset:14px;
+  border-radius:18px;
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.12),transparent 38%),
+    radial-gradient(circle at 80% 20%,rgba(212,175,55,.22),transparent 35%);
+}
+.btn.primary{
+  position:relative;
+  overflow:hidden;
+}
+.btn.primary:after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:70px;
+  left:-90px;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);
+  transform:skewX(-18deg);
+  animation:buttonShine 4.8s ease-in-out infinite;
+}
+@keyframes starDrift{
+  from{background-position:0 0}
+  to{background-position:360px 360px}
+}
+@keyframes screenShine{
+  0%,45%{transform:translateX(-120%)}
+  70%{transform:translateX(120%)}
+  100%{transform:translateX(120%)}
+}
+@keyframes buttonShine{
+  0%,55%{left:-90px}
+  75%{left:120%}
+  100%{left:120%}
+}
+@media(max-width:1050px){
+  .spaceOrb,.holoPyramid,.depthPlate,.holoCard,.starField{display:none}
+  .card:hover,.priceCard:hover,.careCard:hover,.caseCard:hover,.stepCard:hover,.comboBox:hover{
+    transform:translateY(-5px);
+  }
+}
