@@ -1,5 +1,5 @@
 {
-  "name": "karivo-x-2-4",
+  "name": "karivo-x-2-4-normal-concept",
   "version": "2.4.0",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "framer-motion": "^11.18.2",
+    "lucide-react": "^0.468.0",
     "next": "^14.2.16",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"

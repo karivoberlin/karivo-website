@@ -1,17 +1,10 @@
-# KARIVO X 2.4
+# KARIVO X 2.4 Normal Concept
 
-Großer Premium-Meilenstein.
-
-## Neu in 2.4
-- Neue Positionierung: nicht „Website erstellen“, sondern „mehr Anfragen & Vertrauen“
-- Cinematic Hero mit MacBook + Phone
-- Problem-/Lösungsstruktur
-- Case-Study-Sektion
-- Device Showcase
-- Testimonials
-- Final CTA
-- Premium Mobile-Anpassungen
-- Next.js + React + Framer Motion
+Zurück zum normalen KARIVO-Konzept:
+- Kunden kaufen Website-Pakete
+- Care-Pakete als monatliche Betreuung
+- keine kostenlose Analyse-Positionierung
+- Fokus auf Starter / Premium / Business + Care / Care+ / Care Pro
 
 ## Starten
 ```bash
@@ -21,7 +14,3 @@ npm run dev
 
 ## Deployment
 Empfohlen: Vercel über GitHub.
-
-## Wichtig
-- E-Mail / WhatsApp / rechtliche Seiten später final ergänzen
-- Demo-Cases später durch echte Kundenprojekte ersetzen
