@@ -20,8 +20,8 @@ export function Services() {
     <section className="section" id="leistungen">
       <motion.div className="sectionHead" {...reveal}>
         <p className="eyebrow">Leistungen</p>
-        <h2>Alles, was ein lokales Unternehmen online braucht.</h2>
-        <p>KARIVO baut keine überladenen Seiten, sondern klare Premium-Auftritte, die Vertrauen schaffen.</p>
+        <h2>Alles, was Restaurants und Fahrschulen online brauchen.</h2>
+        <p>KARIVO baut keine überladenen Seiten, sondern klare Premium-Auftritte, die Vertrauen schaffen und Anfragen erleichtern.</p>
       </motion.div>
 
       <div className="fourGrid">
@@ -39,9 +39,9 @@ export function Services() {
 
 export function WebsitePackages() {
   const packages = [
-    ["Starter", "349 €", "Für kleine Unternehmen, die schnell professionell online wirken wollen.", ["Onepage", "Kontaktbereich", "Mobile Ansicht"]],
-    ["Premium", "599 €", "Für Unternehmen, die mehr Struktur, Inhalte und Vertrauen brauchen.", ["Bis zu 5 Seiten", "Galerie / Leistungen", "SEO-Grundstruktur"]],
-    ["Business", "899 €", "Für einen individuellen Premium-Auftritt mit stärkerem Design.", ["Mehr Struktur", "Animationen", "Premium-Aufbau"]]
+    ["Starter", "ab 349 €", "Für Restaurants oder Fahrschulen, die schnell professionell online wirken wollen.", ["Onepage", "Kontaktbereich", "Mobile Ansicht"]],
+    ["Premium", "ab 599 €", "Für Betriebe, die mehr Struktur, Inhalte und Vertrauen brauchen.", ["Bis zu 5 Seiten", "Galerie / Leistungen", "SEO-Grundstruktur"]],
+    ["Business", "ab 899 €", "Für einen individuellen Premium-Auftritt mit stärkerem Design.", ["Mehr Struktur", "Animationen", "Premium-Aufbau"]]
   ];
 
   return (
@@ -49,7 +49,7 @@ export function WebsitePackages() {
       <motion.div className="sectionHead" {...reveal}>
         <p className="eyebrow">Website-Pakete</p>
         <h2>Einmaliger Aufbau. Klare Preise.</h2>
-        <p>Wähle das Website-Paket, das zu deinem Unternehmen passt.</p>
+        <p>Wähle das Website-Paket, das zu deinem Restaurant oder deiner Fahrschule passt.</p>
       </motion.div>
 
       <div className="threeGrid">
@@ -121,8 +121,7 @@ export function CarePackages() {
 export function Showcase() {
   const cases = [
     ["Restaurant", "Speisekarte, Galerie, Reservierung und Google Maps."],
-    ["Fahrschule", "Kurse, Preise, Anmeldung und Vertrauen."],
-    ["Handwerk", "Leistungen, Referenzen und direkte Kontaktwege."]
+    ["Fahrschule", "Kurse, Preise, Anmeldung und Vertrauen."]
   ];
 
   return (
@@ -132,13 +131,14 @@ export function Showcase() {
         <h2>So kann ein Premium-Auftritt aussehen.</h2>
       </motion.div>
 
-      <div className="threeGrid">
+      <div className="demoGrid">
         {cases.map(([title, text]) => (
           <motion.article className="caseCard hoverCard" key={title} {...reveal}>
             <div className="caseMock" />
             <small>KARIVO DEMO</small>
             <h3>{title}</h3>
             <p>{text}</p>
+            <a className="demoPlaceholder" href="#kontakt">Demo folgt</a>
           </motion.article>
         ))}
       </div>
@@ -238,7 +238,7 @@ export function Contact() {
       <motion.div {...reveal}>
         <p className="eyebrow">Kontakt</p>
         <h2>Bereit für deine neue Website?</h2>
-        <p>Schick deine Branche, dein gewünschtes Website-Paket und ob du monatliche Betreuung möchtest.</p>
+        <p>Schick kurz, ob es um ein Restaurant oder eine Fahrschule geht und welches Paket dich interessiert.</p>
       </motion.div>
 
       <motion.form className="contactForm" onSubmit={handleSubmit} {...reveal}>
@@ -264,7 +264,7 @@ export function Contact() {
         <textarea name="nachricht" placeholder="Welche Website brauchst du und was soll enthalten sein?" required />
 
         <button type="submit" disabled={status === "sending" || status === "success"} className={status === "success" ? "successButton" : ""}>
-          {status === "idle" && "Anfrage senden"}
+          {status === "idle" && "Kostenlose Anfrage senden"}
           {status === "sending" && "Anfrage wird gesendet..."}
           {status === "success" && "✓ Anfrage erfolgreich versendet"}
           {status === "error" && "Fehler – bitte nochmal versuchen"}

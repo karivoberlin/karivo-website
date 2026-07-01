@@ -28,16 +28,16 @@ export default function Hero() {
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
         transition={{ duration: 0.8 }}
       >
-        <span className="badge">KARIVO X 3.0 · Finale Launch-Version</span>
-        <h1>Premium-Websites für lokale Unternehmen.</h1>
+        <span className="badge">Premium Webdesign aus Deutschland</span>
+        <h1>Mehr Gäste. Mehr Anfragen. Mehr Vertrauen.</h1>
         <p>
-          KARIVO erstellt moderne Websites für Restaurants, Fahrschulen, Handwerker
-          und Dienstleister – hochwertig, mobil optimiert und mit passenden Care-Paketen.
+          KARIVO erstellt moderne Websites für Restaurants und Fahrschulen – hochwertig,
+          mobil optimiert und mit passenden Care-Paketen für laufende Betreuung.
         </p>
 
         <div className="heroActions">
           <a className="btn primary" href="#pakete">Pakete ansehen</a>
-          <a className="btn secondary" href="#kontakt">Website anfragen</a>
+          <a className="btn secondary" href="#kontakt">Kostenlos anfragen</a>
         </div>
 
         <div className="proof">
@@ -85,9 +85,8 @@ export default function Hero() {
       <div className="heroStrip">
         <span>Restaurants</span>
         <span>Fahrschulen</span>
-        <span>Handwerker</span>
-        <span>Beauty</span>
-        <span>Fitnessstudios</span>
+        <span>Premium Design</span>
+        <span>Mobil optimiert</span>
       </div>
     </section>
   );

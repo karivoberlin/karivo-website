@@ -318,3 +318,8 @@ button:disabled{
     transform:translateY(-5px);
   }
 }
+
+/* KARIVO V4 light edits — Restaurant & Fahrschule Fokus */
+.demoGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:980px;margin:0 auto}
+.demoPlaceholder{margin-top:18px;display:inline-flex;width:max-content;border:1px solid rgba(212,175,55,.35);border-radius:999px;padding:10px 14px;color:var(--gold2);font-size:13px;font-weight:900;text-decoration:none;background:rgba(212,175,55,.08)}
+@media(max-width:1050px){.demoGrid{grid-template-columns:1fr}}
