@@ -10,18 +10,18 @@ const reveal = {
 
 export function Services() {
   const items = [
-    ["Neue Website", "Ein hochwertiger Online-Auftritt mit klarer Struktur und moderner Optik."],
-    ["Relaunch", "Aus einer veralteten Seite wird ein professioneller digitaler Eindruck."],
-    ["Mobile Optimierung", "Deine Website funktioniert sauber auf Handy, Tablet und Desktop."],
-    ["Kontaktwege", "Anfrageformular, Telefon, WhatsApp, Reservierung oder Google Maps klar sichtbar."]
+    ["Restaurant-Websites", "Speisekarte, Öffnungszeiten, Reservierung, Galerie und Google Maps so aufgebaut, dass Gäste schnell entscheiden."],
+    ["Fahrschul-Websites", "Kurse, Preise, Theoriezeiten, Anmeldung und Vertrauen für neue Fahrschüler klar strukturiert."],
+    ["Premium-Erster Eindruck", "Starke Optik, moderne Animationen und ein seriöser Aufbau, der nicht nach Baukasten aussieht."],
+    ["Schnelle Kontaktwege", "Telefon, WhatsApp, Anfrageformular und Maps werden sichtbar platziert, damit Besucher sofort handeln."]
   ];
 
   return (
     <section className="section" id="leistungen">
       <motion.div className="sectionHead" {...reveal}>
         <p className="eyebrow">Leistungen</p>
-        <h2>Alles, was Restaurants und Fahrschulen online brauchen.</h2>
-        <p>KARIVO baut keine überladenen Seiten, sondern klare Premium-Auftritte, die Vertrauen schaffen und Anfragen erleichtern.</p>
+        <h2>Zwei Branchen. Ein klares Ziel: mehr Kundenkontakte.</h2>
+        <p>KARIVO baut keine überladenen Seiten, sondern Premium-Auftritte, die sofort seriös wirken und Besucher schneller zur Anfrage bringen.</p>
       </motion.div>
 
       <div className="fourGrid">
@@ -37,20 +37,44 @@ export function Services() {
   );
 }
 
+export function ConversionStrip() {
+  const stats = [
+    ["2 Zielgruppen", "Restaurant & Fahrschule"],
+    ["1 Ziel", "mehr direkte Anfragen"],
+    ["3 Pakete", "Starter · Premium · Business"]
+  ];
+
+  return (
+    <section className="conversionStrip">
+      {stats.map(([big, small]) => (
+        <motion.div className="conversionItem" key={big} {...reveal}>
+          <strong>{big}</strong>
+          <span>{small}</span>
+        </motion.div>
+      ))}
+    </section>
+  );
+}
+
 export function WebsitePackages() {
   const packages = [
-    ["Starter", "ab 349 €", "Für Restaurants oder Fahrschulen, die schnell professionell online wirken wollen.", ["Onepage", "Kontaktbereich", "Mobile Ansicht"]],
-    ["Premium", "ab 599 €", "Für Betriebe, die mehr Struktur, Inhalte und Vertrauen brauchen.", ["Bis zu 5 Seiten", "Galerie / Leistungen", "SEO-Grundstruktur"]],
-    ["Business", "ab 899 €", "Für einen individuellen Premium-Auftritt mit stärkerem Design.", ["Mehr Struktur", "Animationen", "Premium-Aufbau"]]
+    ["Starter", "ab 349 €", "Für einen schnellen, sauberen Online-Auftritt mit den wichtigsten Informationen.", ["Onepage", "Kontaktbereich", "Mobile Ansicht"]],
+    ["Premium", "ab 599 €", "Für Betriebe, die mehr Vertrauen, bessere Struktur und stärkere Wirkung brauchen.", ["Bis zu 5 Seiten", "Galerie / Leistungen", "SEO-Grundstruktur"]],
+    ["Business", "ab 899 €", "Für einen individuellen Premium-Auftritt mit mehr Tiefe und stärkerem Design.", ["Mehr Struktur", "Animationen", "Premium-Aufbau"]]
   ];
 
   return (
     <section className="section prices" id="pakete">
       <motion.div className="sectionHead" {...reveal}>
         <p className="eyebrow">Website-Pakete</p>
-        <h2>Einmaliger Aufbau. Klare Preise.</h2>
-        <p>Wähle das Website-Paket, das zu deinem Restaurant oder deiner Fahrschule passt.</p>
+        <h2>Klare Pakete. Professioneller Auftritt.</h2>
+        <p>Wähle das Paket, das zu deinem Restaurant oder deiner Fahrschule passt – von schneller Onepage bis Premium-Aufbau.</p>
       </motion.div>
+
+      <div className="packageNote">
+        <span>Transparent</span>
+        <p>Alle Pakete sind einmalige Aufbaupreise. Domain, Texte, Bilder und Betreuung können je nach Projekt ergänzt werden.</p>
+      </div>
 
       <div className="threeGrid">
         {packages.map(([name, price, text, features], index) => (
@@ -120,22 +144,27 @@ export function CarePackages() {
 
 export function Showcase() {
   const cases = [
-    ["Restaurant", "Speisekarte, Galerie, Reservierung und Google Maps."],
-    ["Fahrschule", "Kurse, Preise, Anmeldung und Vertrauen."]
+    ["Restaurant", "Speisekarte, Galerie, Reservierung und Google Maps – alles, was Gäste vor dem Besuch brauchen.", "Speisekarte · Reservierung · Maps"],
+    ["Fahrschule", "Kurse, Preise, Anmeldung und Vertrauen – damit Fahrschüler schnell Kontakt aufnehmen.", "Preise · Kurse · Anmeldung"]
   ];
 
   return (
     <section className="showcase">
       <motion.div className="sectionHead" {...reveal}>
         <p className="eyebrow">Beispiele</p>
-        <h2>So kann ein Premium-Auftritt aussehen.</h2>
+        <h2>Beispiele für deine Zielgruppen.</h2>
+        <p>Restaurant und Fahrschule sind vorbereitet. Sobald die Demo-Links da sind, werden die Buttons direkt verknüpft.</p>
       </motion.div>
 
       <div className="demoGrid">
-        {cases.map(([title, text]) => (
-          <motion.article className="caseCard hoverCard" key={title} {...reveal}>
-            <div className="caseMock" />
-            <small>KARIVO DEMO</small>
+        {cases.map(([title, text, tags]) => (
+          <motion.article className={`caseCard hoverCard case${title}`} key={title} {...reveal}>
+            <div className="caseMock">
+              <span>{title}</span>
+              <b />
+              <i />
+            </div>
+            <small>KARIVO DEMO · {tags}</small>
             <h3>{title}</h3>
             <p>{text}</p>
             <a className="demoPlaceholder" href="#kontakt">Demo folgt</a>
@@ -148,10 +177,10 @@ export function Showcase() {
 
 export function Process() {
   const steps = [
-    ["01", "Anfrage", "Du schickst Branche, Wunschpaket und Betreuung."],
-    ["02", "Konzept", "KARIVO erstellt eine passende Richtung für deinen Auftritt."],
-    ["03", "Umsetzung", "Design, Inhalte und Technik werden aufgebaut."],
-    ["04", "Launch", "Die Website geht online und kann mit Care betreut werden."]
+    ["01", "Kurz anfragen", "Du schickst Branche, Wunschpaket und grobe Vorstellungen."],
+    ["02", "Struktur festlegen", "KARIVO plant Aufbau, Inhalte, Kontaktwege und den passenden Stil."],
+    ["03", "Premium-Auftritt bauen", "Design, Texte, Animationen und Technik werden sauber umgesetzt."],
+    ["04", "Live gehen", "Die Website geht online und kann danach mit Care aktuell gehalten werden."]
   ];
 
   return (
@@ -178,8 +207,8 @@ export function FAQ() {
   const faqs = [
     ["Kann man Website und Care kombinieren?", "Ja. Das ist sogar der empfohlene Weg: einmaliger Aufbau + monatliche Betreuung."],
     ["Kann ich auch ohne Care buchen?", "Ja. Care ist optional, aber sinnvoll, wenn Inhalte regelmäßig aktuell bleiben sollen."],
-    ["Für wen ist Premium am besten?", "Premium passt für die meisten lokalen Unternehmen, weil es mehr Struktur und Vertrauen bietet."],
-    ["Kann ich später upgraden?", "Ja. Sowohl Website-Paket als auch Care können später erweitert werden."]
+    ["Für wen ist Premium am besten?", "Premium passt meistens am besten, weil genug Platz für Vertrauen, Bilder, Leistungen und Kontaktwege da ist."],
+    ["Was ist, wenn ich noch keine guten Bilder habe?", "Dann kann die Seite erstmal mit sauberem Aufbau, passenden Platzhaltern und später mit echten Bildern erweitert werden."]
   ];
 
   return (
@@ -237,14 +266,25 @@ export function Contact() {
     <section className="contact" id="kontakt">
       <motion.div {...reveal}>
         <p className="eyebrow">Kontakt</p>
-        <h2>Bereit für deine neue Website?</h2>
-        <p>Schick kurz, ob es um ein Restaurant oder eine Fahrschule geht und welches Paket dich interessiert.</p>
+        <h2>Kostenlose Ersteinschätzung sichern.</h2>
+        <p>Schick kurz, ob es um ein Restaurant oder eine Fahrschule geht. Danach bekommst du eine klare Empfehlung, welches Paket wirklich Sinn macht.</p>
+        <div className="contactTrust">
+          <span>✓ unverbindlich</span>
+          <span>✓ klare Empfehlung</span>
+          <span>✓ ohne Technikstress</span>
+        </div>
       </motion.div>
 
       <motion.form className="contactForm" onSubmit={handleSubmit} {...reveal}>
         <input name="name" placeholder="Name / Unternehmen" required />
         <input name="email" type="email" placeholder="E-Mail" required />
         <input name="telefon" placeholder="Telefon / WhatsApp" />
+
+        <select name="branche">
+          <option>Restaurant</option>
+          <option>Fahrschule</option>
+          <option>Noch unsicher</option>
+        </select>
 
         <select name="paket">
           <option>Premium · 599 €</option>
@@ -261,7 +301,7 @@ export function Contact() {
           <option>Noch unsicher</option>
         </select>
 
-        <textarea name="nachricht" placeholder="Welche Website brauchst du und was soll enthalten sein?" required />
+        <textarea name="nachricht" placeholder="Was soll auf die Website? Zum Beispiel Speisekarte, Kurse, Preise, Galerie, WhatsApp, Google Maps ..." required />
 
         <button type="submit" disabled={status === "sending" || status === "success"} className={status === "success" ? "successButton" : ""}>
           {status === "idle" && "Kostenlose Anfrage senden"}

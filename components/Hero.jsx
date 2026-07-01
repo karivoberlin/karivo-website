@@ -29,21 +29,21 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
       >
         <span className="badge">Premium Webdesign aus Deutschland</span>
-        <h1>Mehr Gäste. Mehr Anfragen. Mehr Vertrauen.</h1>
+        <h1>Websites, die aus Besuchern Kunden machen.</h1>
         <p>
-          KARIVO erstellt moderne Websites für Restaurants und Fahrschulen – hochwertig,
-          mobil optimiert und mit passenden Care-Paketen für laufende Betreuung.
+          KARIVO entwickelt moderne Websites für Restaurants und Fahrschulen – mit
+          klarer Struktur, starkem ersten Eindruck und Kontaktwegen, die sofort funktionieren.
         </p>
 
         <div className="heroActions">
-          <a className="btn primary" href="#pakete">Pakete ansehen</a>
-          <a className="btn secondary" href="#kontakt">Kostenlos anfragen</a>
+          <a className="btn primary" href="#kontakt">Kostenlose Ersteinschätzung</a>
+          <a className="btn secondary" href="#pakete">Pakete ansehen</a>
         </div>
 
         <div className="proof">
-          <span>✓ Starter · Premium · Business</span>
-          <span>✓ Care-Pakete</span>
+          <span>✓ Für Restaurants & Fahrschulen</span>
           <span>✓ Mobil optimiert</span>
+          <span>✓ Betreuung möglich</span>
         </div>
       </motion.div>
 
@@ -62,23 +62,23 @@ export default function Hero() {
               <i /><i /><i /><span>premium-demo.de</span>
             </div>
             <div className="screenHero">
-              <small>PREMIUM LOCAL WEBSITE</small>
-              <h2>Design,<br />das überzeugt.</h2>
+              <small>KARIVO WEBSITE SYSTEM</small>
+              <h2>Online<br />überzeugen.</h2>
             </div>
             <div className="screenCards"><b /><b /><b /></div>
           </div>
 
           <div className="phone">
             <div className="phoneBar" />
-            <h3>Kontakt</h3>
-            <p>WhatsApp · Anfrage · Maps</p>
-            <strong>mobil optimiert</strong>
+            <h3>Anfrage</h3>
+            <p>Telefon · WhatsApp · Maps</p>
+            <strong>1 Klick Kontakt</strong>
           </div>
         </div>
 
         <motion.div className="goldRing" animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 18, ease: "linear" }} />
         <motion.div className="goldOrb" animate={{ y: [-12, 14, -12] }} transition={{ repeat: Infinity, duration: 6 }} />
-        <motion.div className="holoCard holoCardOne" animate={{ y: [0, -18, 0], rotateZ: [-4, 4, -4] }} transition={{ repeat: Infinity, duration: 6 }}>Website + Care</motion.div>
+        <motion.div className="holoCard holoCardOne" animate={{ y: [0, -18, 0], rotateZ: [-4, 4, -4] }} transition={{ repeat: Infinity, duration: 6 }}>Reservierung & Anfrage</motion.div>
         <motion.div className="holoCard holoCardTwo" animate={{ y: [0, 16, 0], rotateZ: [4, -4, 4] }} transition={{ repeat: Infinity, duration: 7 }}>Premium Auftritt</motion.div>
       </motion.div>
 

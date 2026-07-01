@@ -323,3 +323,130 @@ button:disabled{
 .demoGrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:980px;margin:0 auto}
 .demoPlaceholder{margin-top:18px;display:inline-flex;width:max-content;border:1px solid rgba(212,175,55,.35);border-radius:999px;padding:10px 14px;color:var(--gold2);font-size:13px;font-weight:900;text-decoration:none;background:rgba(212,175,55,.08)}
 @media(max-width:1050px){.demoGrid{grid-template-columns:1fr}}
+
+/* KARIVO V4.1 — Premium Feinschliff */
+.badge{
+  box-shadow:inset 0 0 22px rgba(212,175,55,.08),0 12px 40px rgba(0,0,0,.22);
+}
+.heroText h1{
+  max-width:900px;
+}
+.heroText p{
+  border-left:3px solid rgba(212,175,55,.52);
+  padding-left:18px;
+}
+.primary:hover{
+  box-shadow:0 24px 90px rgba(212,175,55,.30);
+}
+.secondary:hover,.navCta:hover{
+  border-color:rgba(212,175,55,.58);
+  background:rgba(212,175,55,.10);
+}
+.proof span{
+  background:rgba(255,255,255,.035);
+  backdrop-filter:blur(12px);
+}
+.conversionStrip{
+  margin:-26px 6% 40px;
+  position:relative;
+  z-index:6;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+.conversionItem{
+  border:1px solid rgba(212,175,55,.20);
+  border-radius:26px;
+  padding:24px;
+  background:linear-gradient(135deg,rgba(212,175,55,.10),rgba(255,255,255,.035));
+  backdrop-filter:blur(18px);
+  box-shadow:0 25px 80px rgba(0,0,0,.25);
+}
+.conversionItem strong{
+  display:block;
+  color:var(--gold2);
+  font-family:"Space Grotesk";
+  font-size:clamp(25px,3vw,40px);
+  line-height:1;
+  letter-spacing:-1px;
+  margin-bottom:8px;
+}
+.conversionItem span{
+  color:#cfd0d8;
+  font-weight:800;
+}
+.card,.priceCard,.careCard,.caseCard,.stepCard,.comboBox,details,.contactForm{
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 24px 70px rgba(0,0,0,.18);
+}
+.priceCard.featured,.careCard.featured{
+  transform:translateY(-10px);
+}
+.priceCard.featured:hover,.careCard.featured:hover{
+  transform:translateY(-16px);
+}
+.demoGrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  max-width:1120px;
+  margin:auto;
+}
+.caseRestaurant .caseMock{
+  background:
+    radial-gradient(circle at 20% 25%,rgba(255,255,255,.20),transparent 18%),
+    linear-gradient(135deg,rgba(212,175,55,.28),rgba(70,42,18,.18) 42%,rgba(255,255,255,.04));
+}
+.caseFahrschule .caseMock{
+  background:
+    radial-gradient(circle at 78% 26%,rgba(255,255,255,.18),transparent 18%),
+    linear-gradient(135deg,rgba(255,255,255,.10),rgba(212,175,55,.18),rgba(255,255,255,.03));
+}
+.caseMock span{
+  position:absolute;
+  left:20px;
+  top:18px;
+  color:var(--gold2);
+  font-weight:900;
+  letter-spacing:1px;
+}
+.caseMock b,.caseMock i{
+  position:absolute;
+  left:20px;
+  right:20px;
+  height:12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+}
+.caseMock b{bottom:46px;width:52%}
+.caseMock i{bottom:24px;width:72%;display:block}
+.demoPlaceholder{
+  margin-top:20px;
+  display:inline-flex;
+  width:max-content;
+  text-decoration:none;
+  border:1px dashed rgba(212,175,55,.55);
+  color:var(--gold2);
+  border-radius:999px;
+  padding:12px 16px;
+  font-weight:900;
+  background:rgba(212,175,55,.07);
+}
+.contactTrust{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:26px;
+}
+.contactTrust span{
+  border:1px solid rgba(212,175,55,.24);
+  border-radius:999px;
+  padding:9px 12px;
+  color:#d7d8df;
+  background:rgba(255,255,255,.04);
+  font-weight:800;
+  font-size:13px;
+}
+@media(max-width:1050px){
+  .conversionStrip,.demoGrid{grid-template-columns:1fr;margin-left:5%;margin-right:5%}
+  .priceCard.featured,.careCard.featured{transform:none}
+}

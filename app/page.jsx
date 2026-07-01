@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import {
   Services,
+  ConversionStrip,
   WebsitePackages,
   CarePackages,
   Showcase,
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Services />
+      <ConversionStrip />
       <WebsitePackages />
       <CarePackages />
       <Showcase />
@@ -26,7 +28,7 @@ export default function Home() {
       <Contact />
       <footer>
         <strong>KARIVO</strong>
-        <span>Premium Websites für lokale Unternehmen.</span>
+        <span>Premium Websites für Restaurants & Fahrschulen.</span>
       </footer>
     </>
   );
